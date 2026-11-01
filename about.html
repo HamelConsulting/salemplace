@@ -136,46 +136,15 @@ nav a{white-space:nowrap}
 <div class="mail">
 <h3>Contact the Board of Trustees</h3>
 <address>Salem Place Condominium Association<br>Attn: Board of Trustees<br>292 Salem Street<br>Revere, MA 02151</address>
-<p>Send a message online using the form below, or write to the Board at the address above.</p>
+<p>Write to the Board at the address above, or send a message online.</p>
+<p><a class="btn" href="contact.html">Send a message</a></p>
 </div>
 </div>
 
-<section class="cform" id="contact">
-<h2>Send a message</h2>
-<p class="cintro">Questions for the Board of Trustees about the building, moves, deliveries, parking or storage. The association does not rent or sell units; for a specific unit, please contact its owner.</p>
-<form id="contact-form" novalidate>
-<input type="hidden" name="access_key" value="0193f823-4c72-4d3c-9b3c-c37e050d600a">
-<input type="hidden" name="subject" value="New inquiry from Salem Place website">
-<input type="hidden" name="from_name" value="Salem Place Contact Form">
-<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-<div class="frow">
-<label>Name<input type="text" name="name" required autocomplete="name"></label>
-<label>Email<input type="email" name="email" required autocomplete="email"></label>
-</div>
-<div class="frow">
-<label>Phone <span class="opt">(optional)</span><input type="tel" name="phone" autocomplete="tel"></label>
-<label>Unit number <span class="opt">(if you live here)</span><input type="text" name="unit" inputmode="numeric" maxlength="4"></label>
-</div>
-<label>Topic<select name="topic"><option>General question</option><option>Move in or move out</option><option>Parking</option><option>Storage unit</option><option>Maintenance or common areas</option><option>Other</option></select></label>
-<label>Message<textarea name="message" rows="6" required></textarea></label>
-<button type="submit" class="btn">Send message</button>
-<p class="fstatus" id="fstatus" role="status" aria-live="polite"></p>
-</form>
-</section>
 </div>
 
-<script>
-(function(){var f=document.getElementById('contact-form'),s=document.getElementById('fstatus'),b=f.querySelector('button');
-f.addEventListener('submit',function(e){e.preventDefault();
-if(!f.checkValidity()){s.className='fstatus err';s.textContent='Please fill in your name, a valid email and a message.';return}
-b.disabled=true;b.textContent='Sending...';s.className='fstatus';s.textContent='';
-fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
-.then(function(r){return r.json()}).then(function(d){if(d.success){f.reset();s.className='fstatus ok';s.textContent='Thank you. Your message was sent to the Board of Trustees.'}else{throw new Error(d.message||'')}})
-.catch(function(){s.className='fstatus err';s.textContent='Sorry, the message could not be sent. Please try again or write to the Board by mail.'})
-.finally(function(){b.disabled=false;b.textContent='Send message'})})})();
-</script>
 
-<footer><div class="wrap"><span>&copy; <span id="y">2026</span> Salem Place Condominium Association &middot; 292 Salem Street, Revere, MA 02151</span><span class="flinks"><a href="rentals.html">Units for Rent</a> &middot; <a href="residents.html">Residents Portal</a> &middot; <a href="about.html">About</a></span></div></footer>
+<footer><div class="wrap"><span>&copy; <span id="y">2026</span> Salem Place Condominium Association &middot; 292 Salem Street, Revere, MA 02151</span><span class="flinks"><a href="rentals.html">Units for Rent</a> &middot; <a href="residents.html">Residents Portal</a> &middot; <a href="about.html">About</a> &middot; <a href="contact.html">Contact</a></span></div></footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
