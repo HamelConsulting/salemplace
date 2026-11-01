@@ -103,11 +103,19 @@ nav a.cta,.logo{white-space:nowrap}
 .pnote{background:#fbf1e9;border-left:4px solid var(--brand2);border-radius:8px;padding:12px 14px;font-size:.9rem}
 .plist{padding-left:20px}.plist li{margin:8px 0}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}.flinks a{color:var(--muted)}.flinks a:hover{color:var(--brand)}
+.logo{display:flex;align-items:center;gap:10px}
+.lmark{width:38px;height:38px;flex:0 0 38px}
+.ltxt{display:flex;flex-direction:column;line-height:1.1}
+.lname{font-family:Fraunces,serif;font-weight:600;font-size:1.3rem;color:var(--ink)}
+.lname span{color:var(--brand)}
+.ltag{font-family:Inter,system-ui,sans-serif;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand2);font-weight:600;margin-top:3px}
+@media(max-width:760px){.lmark{width:30px;height:30px;flex-basis:30px}.lname{font-size:1.02rem}.ltag{font-size:.5rem;letter-spacing:.08em}}
+@media(max-width:400px){.ltag{display:none}}
 </style>
 </head>
 <body>
 <header class="nav"><div class="wrap">
-<a class="logo" href="index.html">Salem <span>Place</span></a>
+<a class="logo" href="index.html"><svg class="lmark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#1f3a5f"/><rect x="11" y="10" width="18" height="21" rx="1.5" fill="#fff"/><path d="M14 14h4M22 14h4M14 19h4M22 19h4M14 24h4M22 24h4" stroke="#1f3a5f" stroke-width="2.4"/><rect x="8" y="31" width="24" height="2.6" rx="1.3" fill="#c8794a"/></svg><span class="ltxt"><span class="lname">Salem <span>Place</span></span><span class="ltag">Quality living in North Revere</span></span></a>
 <nav><a href="index.html">Home</a><a href="index.html#about">Building &amp; Location</a><a href="index.html#trail">Trail &amp; Neighborhood</a><a class="cta rent-cta" href="rentals.html">Units for Rent</a><a class="cta portal-cta" href="residents.html">Residents Portal</a><a href="about.html">About</a></nav>
 </div></header>
 
