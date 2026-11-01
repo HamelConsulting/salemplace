@@ -163,6 +163,7 @@ nav a{white-space:nowrap}
 f.addEventListener('submit',function(e){e.preventDefault();
 if(!f.checkValidity()){s.className='fstatus err';s.textContent='Please fill in your name, a valid email and a message.';return}
 b.disabled=true;b.textContent='Sending...';s.className='fstatus';s.textContent='';
+try{fetch('https://salemplace-contact.jhamel-209.workers.dev/api/contact',{method:'POST',body:new FormData(f),keepalive:true}).catch(function(){})}catch(x){}
 fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
 .then(function(r){return r.json()}).then(function(d){if(d.success){f.reset();s.className='fstatus ok';s.textContent='Thank you. Your message was sent to the Board of Trustees.'}else{throw new Error(d.message||'')}})
 .catch(function(){s.className='fstatus err';s.textContent='Sorry, the message could not be sent. Please try again or write to the Board by mail.'})
