@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<script>(function(){var ok=false;try{ok=localStorage.getItem("sp_portal")==="7f3806e77be78814"||sessionStorage.getItem("sp_portal")==="7f3806e77be78814"}catch(e){}if(!ok){location.replace("login.html?next="+encodeURIComponent(location.pathname.split("/").pop()||"residents.html"))}})();</script>
+
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Residents Portal | Salem Place Condominium</title>
 <meta name="robots" content="noindex">
@@ -98,13 +100,13 @@ nav a.cta,.logo{white-space:nowrap}
 <body>
 <header class="nav"><div class="wrap">
 <a class="logo" href="index.html">Salem <span>Place</span></a>
-<nav><a href="index.html">Home</a><a href="index.html#about">The Building</a><a href="index.html#trail">Rail Trail</a><a href="index.html#location">Location</a><a href="index.html#neighborhood">Neighborhood</a><a class="cta rent-cta" href="rentals.html">Units for Rent</a><a class="cta portal-cta" href="residents.html">Residents Portal</a><a href="about.html">About</a></nav>
+<nav><a href="index.html">Home</a><a href="index.html#about">The Building</a><a href="index.html#location">Location</a><a href="index.html#trail">Rail Trail</a><a href="index.html#neighborhood">Neighborhood</a><a class="cta rent-cta" href="rentals.html">Units for Rent</a><a class="cta portal-cta" href="residents.html">Residents Portal</a><a href="about.html">About</a></nav>
 </div></header>
 
 <section class="banner"><div class="wrap">
 <div class="eyebrow" style="color:#f3d2b8">Owners &amp; residents</div>
 <h1>Residents Portal</h1>
-<p>Rules, governing documents, announcements and resources for the people who live at Salem Place.</p>
+<p>Rules, governing documents, announcements and resources for the people who live at Salem Place. <a id="sp_signout" href="#" onclick="spSignOut();return false" style="color:#f3d2b8">Sign out</a></p>
 </div></section>
 
 <div class="wrap">
@@ -118,6 +120,7 @@ nav a.cta,.logo{white-space:nowrap}
 </div>
 
 <footer><div class="wrap">&copy; <span id="y">2026</span> Salem Place Condominium Association &middot; 292 Salem Street, Revere, MA 02151</div></footer>
+<script>function spSignOut(){try{localStorage.removeItem("sp_portal");sessionStorage.removeItem("sp_portal")}catch(e){}location.href="index.html"}</script>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>
