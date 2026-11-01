@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Salem Place Condominium | 292 Salem Street, Revere MA</title>
+<meta name="description" content="Salem Place Condominium at 292 Salem Street, Revere, Massachusetts. Elevator building on the Northern Strand rail trail, minutes from Route 1, the T, Revere Beach and Boston.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d2a33;--muted:#5b6b75;--bg:#fbfaf7;--card:#fff;--line:#e7e2d9;--brand:#2f5d50;--brand2:#c8794a;--soft:#eef3f0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:var(--brand)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.2}
+h2{font-size:clamp(1.7rem,3.5vw,2.4rem);margin-bottom:12px}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:600;color:var(--brand2);margin-bottom:8px}
+header.nav{position:sticky;top:0;z-index:10;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:Fraunces,serif;font-weight:600;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--brand)}
+nav a{color:var(--ink);text-decoration:none;font-size:.92rem;margin-left:22px;font-weight:500}
+nav a:hover{color:var(--brand)}
+@media(max-width:760px){nav{display:none}}
+.hero{position:relative;min-height:78vh;display:flex;align-items:flex-end;color:#fff;background:#2f5d50 url("ad3ae264-image.png") center 40%/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.05) 30%,rgba(10,25,20,.78))}
+.hero .wrap{position:relative;padding-bottom:64px;padding-top:120px}
+.hero h1{font-size:clamp(2.4rem,6vw,4.2rem);max-width:760px}
+.hero p{font-size:clamp(1.05rem,2vw,1.25rem);max-width:620px;margin-top:14px;opacity:.95}
+.btns{margin-top:26px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{display:inline-block;padding:12px 22px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.95rem}
+.btn.solid{background:#fff;color:var(--brand)}
+.btn.ghost{border:1.5px solid rgba(255,255,255,.8);color:#fff}
+section{padding:84px 0}
+.lead{color:var(--muted);font-size:1.08rem;max-width:720px}
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:34px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.fact b{display:block;font-family:Fraunces,serif;font-size:1.7rem;color:var(--brand)}
+.fact span{color:var(--muted);font-size:.9rem}
+@media(max-width:760px){.facts{grid-template-columns:repeat(2,1fr)}}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+@media(max-width:860px){.grid3{grid-template-columns:1fr}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.card .body{padding:20px}
+.card h3{font-size:1.2rem;margin-bottom:6px}
+.card p{color:var(--muted);font-size:.95rem}
+.ph{aspect-ratio:4/3;display:flex;align-items:flex-end;padding:14px;color:#fff;font-size:.8rem;letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.ph.trail{background:linear-gradient(135deg,#5f8f6f,#2f5d50)}
+.ph.beach{background:linear-gradient(135deg,#7fb7d3,#d9c49a)}
+.ph.city{background:linear-gradient(135deg,#40566a,#c8794a)}
+.alt{background:var(--soft)}
+.photo{display:block;width:100%;aspect-ratio:4/3;object-fit:cover}
+.gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.gallery .photo{border-radius:16px}
+@media(max-width:640px){.gallery{grid-template-columns:1fr}}
+.amen{display:grid;grid-template-columns:repeat(2,1fr);gap:12px 28px;margin-top:28px;list-style:none}
+.amen li{padding-left:28px;position:relative}
+.amen li::before{content:"";position:absolute;left:0;top:.55em;width:14px;height:14px;border-radius:50%;background:var(--brand2);opacity:.85}
+@media(max-width:640px){.amen{grid-template-columns:1fr}}
+.split{display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:start}
+@media(max-width:860px){.split{grid-template-columns:1fr}}
+.map{width:100%;height:380px;border:0;border-radius:16px}
+.distances{list-style:none;margin-top:18px}
+.distances li{display:flex;justify-content:space-between;border-bottom:1px solid var(--line);padding:11px 0}
+.distances li span:last-child{color:var(--muted)}
+.note{font-size:.82rem;color:var(--muted);margin-top:10px}
+.rent{background:var(--brand);color:#fff;border-radius:20px;padding:44px;display:flex;justify-content:space-between;gap:24px;align-items:center;flex-wrap:wrap}
+.rent p{opacity:.9;max-width:560px}
+.rent .tag{background:rgba(255,255,255,.15);border-radius:999px;padding:8px 16px;font-weight:600;font-size:.9rem}
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+<a class="logo" href="#">Salem <span>Place</span></a>
+<nav><a href="#about">The Building</a><a href="#trail">Rail Trail</a><a href="#location">Location</a><a href="#neighborhood">Neighborhood</a><a href="#residents">Residents</a></nav>
+</div></header>
+
+<section class="hero"><div class="wrap">
+<div class="eyebrow" style="color:#f3d2b8">292 Salem Street &middot; Revere, Massachusetts</div>
+<h1>Easy living on the edge of the trail.</h1>
+<p>Salem Place is a five-story elevator condominium with balconies, deeded parking and the Northern Strand rail trail right next door, minutes from Route 1, the T, Revere Beach and Boston.</p>
+<div class="btns"><a class="btn solid" href="#about">Explore Salem Place</a><a class="btn ghost" href="#location">See the location</a></div>
+</div></section>
+
+<section id="about"><div class="wrap">
+<div class="eyebrow">The Building</div>
+<h2>A well-kept community of 42 homes</h2>
+<p class="lead">Salem Place offers spacious two-bedroom, two-bath condominiums in a quiet elevator building. Most homes open onto a private balcony, and residents enjoy deeded parking, guest parking and a setting that backs onto open green space.</p>
+<div class="facts">
+<div class="fact"><b>42</b><span>Condominium homes</span></div>
+<div class="fact"><b>5</b><span>Stories, with elevator</span></div>
+<div class="fact"><b>2 / 2</b><span>Typical bed / bath layout</span></div>
+<div class="fact"><b>~1,280</b><span>Square feet in many homes</span></div>
+</div>
+</div></section>
+
+<section style="padding-top:0"><div class="wrap">
+<div class="gallery">
+<img class="photo" src="57bee6bf-image.png" alt="Salem Place front facade with balconies on Salem Street">
+<img class="photo" src="f5a9dfe0-image.png" alt="Salem Place in summer with landscaped front lawn">
+</div>
+</div></section>
+
+<section class="alt"><div class="wrap">
+<div class="eyebrow">Amenities</div>
+<h2>Everything you need, close to home</h2>
+<ul class="amen">
+<li>Elevator access to every floor</li>
+<li>Private balconies on most homes</li>
+<li>Central air conditioning and heat</li>
+<li>In-unit washer and dryer in many homes</li>
+<li>Deeded parking plus guest parking</li>
+<li>Landscaped grounds along Salem Street</li>
+<li>Direct access to the Northern Strand rail trail</li>
+<li>Professionally managed condominium association</li>
+</ul>
+</div></section>
+
+<section id="trail"><div class="wrap split">
+<div>
+<div class="eyebrow">Right next door</div>
+<h2>The Northern Strand Community Trail</h2>
+<p class="lead">Step outside and you're on the Northern Strand, a paved rail trail of about 10 miles linking Everett, Malden, Revere, Saugus and Lynn. Walk, run or bike through wooded marshland, ride toward Lynn and the ocean, or head the other way toward the Mystic River and Boston's path network.</p>
+</div>
+<div class="card"><img class="photo" src="bfef8087-image.png" alt="Salem Place from the Northern Strand rail trail, with resident parking"><div class="body"><h3>Walk, run, bike</h3><p>The trail runs right along the back of the property. Car-free miles, steps from your door.</p></div></div>
+</div></section>
+
+<section id="location" class="alt"><div class="wrap split">
+<div>
+<div class="eyebrow">Location</div>
+<h2>Minutes from everything</h2>
+<p class="lead">West Revere puts you close to the highway, the T and the beach without the city bustle.</p>
+<ul class="distances">
+<li><span>Route 1 &amp; Route 60</span><span>Minutes away</span></li>
+<li><span>Orange Line (Malden Center, Oak Grove)</span><span>Short drive or bus</span></li>
+<li><span>Blue Line (Wonderland, Revere Beach)</span><span>Short drive</span></li>
+<li><span>Revere Beach</span><span>Short drive</span></li>
+<li><span>Logan International Airport</span><span>About 20 minutes</span></li>
+<li><span>Downtown Boston</span><span>About 25 minutes</span></li>
+</ul>
+<p class="note">Travel times are approximate and depend on traffic.</p>
+</div>
+<iframe class="map" title="Map of Salem Place, 292 Salem Street, Revere MA" loading="lazy" src="https://maps.google.com/maps?q=292%20Salem%20St%2C%20Revere%2C%20MA%2002151&z=14&output=embed"></iframe>
+</div></section>
+
+<section id="neighborhood"><div class="wrap">
+<div class="eyebrow">Neighborhood</div>
+<h2>Dining, shopping and the shore</h2>
+<p class="lead">Revere has it all close by: neighborhood restaurants and markets, the shops along Route 1 and Northgate, and America's first public beach.</p>
+<div class="grid3">
+<div class="card"><div class="ph city">Dining photo coming soon</div><div class="body"><h3>Eat &amp; shop</h3><p>Local restaurants, cafés and markets, plus the big-box convenience of Route 1 and Northgate Shopping Center.</p></div></div>
+<div class="card"><div class="ph beach">Revere Beach photo coming soon</div><div class="body"><h3>Revere Beach</h3><p>Three miles of historic public beach, home of the International Sand Sculpting Festival every summer.</p></div></div>
+<div class="card"><div class="ph trail">Parks photo coming soon</div><div class="body"><h3>Parks &amp; open space</h3><p>The rail trail, nearby conservation land and city parks give you room to breathe.</p></div></div>
+</div>
+</div></section>
+
+<section id="residents" class="alt"><div class="wrap">
+<div class="eyebrow">For residents</div>
+<h2>Association information</h2>
+<p class="lead">Announcements, building rules, meeting schedules and association documents will be posted here for owners and residents.</p>
+<div class="grid3">
+<div class="card"><div class="body"><h3>Announcements</h3><p>Coming soon.</p></div></div>
+<div class="card"><div class="body"><h3>Documents &amp; rules</h3><p>Coming soon.</p></div></div>
+<div class="card"><div class="body"><h3>Contact the board</h3><p>Coming soon.</p></div></div>
+</div>
+</div></section>
+
+<section><div class="wrap">
+<div class="rent">
+<div><div class="eyebrow" style="color:#f3d2b8">Homes at Salem Place</div><h2 style="color:#fff">Available rentals</h2><p>From time to time, homes at Salem Place become available for rent. Check back here for current listings.</p></div>
+<span class="tag">No current listings</span>
+</div>
+</div></section>
+
+<footer><div class="wrap"><span>&copy; <span id="y">2026</span> Salem Place Condominium &middot; 292 Salem Street, Revere, MA 02151</span><span>Information deemed reliable but not guaranteed.</span></div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
