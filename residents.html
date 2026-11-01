@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Residents | Salem Place Condominium</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d2a33;--muted:#5b6b75;--bg:#fbfaf7;--card:#fff;--line:#e7e2d9;--brand:#2f5d50;--brand2:#c8794a;--soft:#eef3f0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:var(--brand)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.2}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:600;color:var(--brand2);margin-bottom:8px}
+header.nav{position:sticky;top:0;z-index:10;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:Fraunces,serif;font-weight:600;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--brand)}
+nav a{color:var(--ink);text-decoration:none;font-size:.92rem;margin-left:22px;font-weight:500}
+.banner{background:var(--brand);color:#fff;padding:64px 0 56px}
+.banner h1{font-size:clamp(2rem,5vw,3.2rem)}
+.banner p{opacity:.9;max-width:640px;margin-top:10px}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:-34px 0 0}
+@media(max-width:860px){.res{grid-template-columns:1fr}}
+.rc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 6px 20px rgba(29,42,51,.06)}
+.rc h3{font-size:1.15rem;margin-bottom:6px}
+.rc p{color:var(--muted);font-size:.93rem}
+.rc .btn{margin-top:14px}
+.btn{display:inline-block;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.9rem;background:var(--brand);color:#fff}
+.btn.line{background:transparent;color:var(--brand);border:1.5px solid var(--brand)}
+.doc{display:grid;grid-template-columns:240px 1fr;gap:44px;padding:72px 0}
+@media(max-width:900px){.doc{grid-template-columns:1fr}.toc{display:none}}
+.toc{position:sticky;top:84px;align-self:start}
+.toc a{display:flex;gap:10px;padding:6px 0;color:var(--muted);text-decoration:none;font-size:.9rem;border-bottom:1px solid var(--line)}
+.toc a b{color:var(--brand2);width:14px}
+.toc a:hover{color:var(--brand)}
+.dochead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--brand);padding-bottom:18px;margin-bottom:10px}
+.dochead h2{font-size:clamp(1.6rem,3.4vw,2.2rem)}
+.warn{background:#fbf1e9;border-left:4px solid var(--brand2);padding:14px 18px;border-radius:8px;margin:22px 0 8px;font-size:.95rem}
+.rule{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:30px 0;border-bottom:1px solid var(--line);scroll-margin-top:80px}
+.rk{width:44px;height:44px;border-radius:12px;background:var(--soft);color:var(--brand);font-family:Fraunces,serif;font-weight:600;font-size:1.3rem;display:flex;align-items:center;justify-content:center}
+.rule h3{font-size:1.35rem;margin:6px 0 10px}
+.rule h4{font-size:1.1rem;margin:22px 0 8px}
+.ri{color:var(--muted);margin-bottom:10px}
+.rule ul{list-style:none}
+.rule li{position:relative;padding:6px 0 6px 22px}
+.rule li::before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:50%;background:var(--brand2)}
+.fines{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0 10px}
+.fines div{background:var(--soft);border-radius:12px;padding:14px 16px}
+.fines span{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.fines b{font-family:Fraunces,serif;font-size:1.15rem;color:var(--brand)}
+@media(max-width:600px){.fines{grid-template-columns:1fr}.rule{grid-template-columns:1fr}}
+.closing{color:var(--muted);font-size:.92rem;margin-top:26px}
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+@media print{header.nav,.res,.toc,footer,.dochead .btn{display:none}.banner{padding:20px 0;background:none;color:var(--ink)}.doc{display:block;padding:0}.rule{break-inside:avoid}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+<a class="logo" href="index.html">Salem <span>Place</span></a>
+<nav><a href="index.html">Home</a><a href="#rules">Rules</a></nav>
+</div></header>
+
+<section class="banner"><div class="wrap">
+<div class="eyebrow" style="color:#f3d2b8">Owners &amp; residents</div>
+<h1>Resident Resources</h1>
+<p>Building rules, association documents and information for the people who live at Salem Place.</p>
+</div></section>
+
+<div class="wrap">
+<div class="res">
+<div class="rc"><h3>Rules &amp; Regulations</h3><p>The building rules every owner, resident and guest is expected to follow.</p><a class="btn" href="Salem-Place-Rules-and-Regulations.pdf" download>Download PDF</a></div>
+<div class="rc"><h3>Announcements</h3><p>Building notices and updates from the Trustees will be posted here.</p></div>
+<div class="rc"><h3>Contact the Trustees</h3><p>For moves, deliveries, storage units and parking questions, contact the Board of Trustees.</p></div>
+</div>
+
+<div class="doc" id="rules">
+<aside class="toc"><a href="#rule-a"><b>A</b>Disturbances</a><a href="#rule-b"><b>B</b>Balconies</a><a href="#rule-c"><b>C</b>Trash and Garbage</a><a href="#rule-d"><b>D</b>Common Area Storage</a><a href="#rule-e"><b>E</b>Common Areas</a><a href="#rule-f"><b>F</b>Vandalism and Obstruction</a><a href="#rule-g"><b>G</b>Moving</a><a href="#rule-h"><b>H</b>Deliveries</a><a href="#rule-i"><b>I</b>Parking and Vehicles</a><a href="#rule-j"><b>J</b>Fees, Liens and Fines</a><a href="#rule-k"><b>K</b>Storage Unit Licenses</a></aside>
+<main>
+<div class="dochead"><div><div class="eyebrow">Salem Place Condominium Trust</div><h2>Rules &amp; Regulations</h2></div><a class="btn line" href="Salem-Place-Rules-and-Regulations.pdf" download>Download PDF</a></div>
+<div class="warn">Failure to comply with these Rules and Regulations is a violation and is subject to fines and legal action.</div>
+<section class="rule" id="rule-a"><div class="rk">A</div><div><h3>Disturbances</h3><ul><li>Owners and residents must take great care not to disturb other residents with excessive noise or voices, or with unreasonable use of radios, televisions, musical instruments, telephones, amplifiers, surround sound or similar devices.</li><li>Noisy repairs or installation work may be done only on weekdays between 8:00 AM and 9:00 PM. As a courtesy, please let your neighbors know about possible noise.</li><li>Between 9:00 PM and 8:00 AM on any day, no sound, noise or vibration from one unit may be loud enough to be heard or felt in another unit.</li></ul></div></section><section class="rule" id="rule-b"><div class="rk">B</div><div><h3>Balconies</h3><p class="ri">To protect the structure, keep balconies sanitary and keep a uniform appearance from outside the building:</p><ul><li>Nothing may be affixed to the exterior facing, floor or ceiling of a balcony.</li><li>Balcony floors must not be covered, to prevent water from collecting and causing damage.</li><li>Satellite dishes may not be permanently attached to balconies or railings.</li><li>Balconies may not be used for storage of boxes, storage bins, appliances, bicycles or similar items.</li><li>The balcony closet that houses the heat pump must not be used for storage. Items there can block air flow and ventilation and violate the master insurance policy.</li><li>No laundry, clothes, clotheslines, drying racks, rugs or similar items may be hung or displayed.</li><li>Do not throw or sweep anything off a balcony (for example cigarettes, water or dirt), and do not let water or other liquids drip or spill over the edge.</li><li>By order of the Revere Fire Department, no charcoal cooker, brazier, hibachi or grill, and no gasoline, propane or other flammable-fuel stove or similar device, may be lit or used on balconies or inside units. Electric grills are permitted.</li><li>Balcony railings may not be removed to bring in large items such as furniture or appliances, for deliveries or for moving in or out.</li></ul></div></section><section class="rule" id="rule-c"><div class="rk">C</div><div><h3>Trash and Garbage</h3><ul><li>Garbage must be placed in securely tied plastic bags and put in the dumpster.</li><li>Large boxes and other large objects must be broken down and placed inside the dumpster.</li><li>Littering is prohibited anywhere in the building or on the property.</li><li>Large items such as furniture (dressers, cabinets, mattresses and the like), TVs, computers and appliances may not be left in or around the dumpster. Buy a large-item sticker from the Revere DPW at revere.org/trash or call the DPW for details. The DPW Yard is open the last Saturday of each month for overflow and large items.</li></ul></div></section><section class="rule" id="rule-d"><div class="rk">D</div><div><h3>Common Area Storage</h3><ul><li>Personal property placed in the storage areas or other common areas is kept at the owner&#x27;s sole risk. The Association is not liable for loss, destruction, theft or damage to that property.</li><li>Nothing may be stored, in a unit or in the storage area, that creates a fire hazard, violates any law or regulation, or increases the building&#x27;s insurance rates. The Association assumes no legal responsibility for the care, damage or loss of any property, whether in a unit or in a storage cubicle rented to a resident.</li><li>A limited bicycle storage area is provided. Bicycles may not be stored on balconies or in any other common area.</li></ul></div></section><section class="rule" id="rule-e"><div class="rk">E</div><div><h3>Common Areas</h3><p class="ri">The common areas are the hallways, stairwells, lobby, garage and elevator.</p><ul><li>No offensive activity that interferes with the rights, comfort or convenience of other residents, and nothing that is or may become a nuisance, is allowed in the common areas.</li><li>Smoking and drinking alcoholic beverages are prohibited in all indoor common areas. Use of any unlawful substance on the property is prohibited.</li><li>Recreational activities and loitering in the driving lanes, parking area and garage are prohibited.</li><li>You are responsible for cleaning up your own spills in the common areas, including coffee, soda, water, leaking trash bags, tissues and paper.</li><li>This is a secured building. Owners, residents and tenants must use the lobby monitor, which can be accessed through the SPCT app provided by the Trust.</li><li>Only let in your own guests. Visitors should use the buzzer or call you before entering. Never let in anyone you do not know or are not expecting.</li><li>Nothing may be hung, displayed or exposed on the exterior of a unit or in the common areas.</li><li>Tasteful door decorations are permitted as long as the unit number stays visible. Unit owners must have unit numbers on their doors.</li><li>No rugs or other obstructions may be placed outside a unit door in the hallway.</li><li>Solicitors are not permitted in the building.</li><li>Nothing may be left on the lobby floor or tables, including unwanted mail and circulars.</li><li>Lobby furniture may not be used as a door stop.</li></ul></div></section><section class="rule" id="rule-f"><div class="rk">F</div><div><h3>Vandalism and Obstruction</h3><ul><li>Defacing or deliberately damaging the building, or posting notes in the common areas, is prohibited. Any damage will be promptly repaired at the expense of the responsible unit owner. Surveillance cameras are in use throughout the property.</li><li>Nothing may be done or kept in the common areas that would cancel the building&#x27;s insurance or violate any law, ordinance or regulation.</li><li>Only the Trustees may take down notices.</li></ul></div></section><section class="rule" id="rule-g"><div class="rk">G</div><div><h3>Moving</h3><ul><li>Call the Trustees with the dates and times of any move in or move out, so the door buzzer can be updated.</li><li>Unit owners are fully responsible for the conduct of the residents of their unit, including tenants, and for informing them of these Rules and Regulations.</li></ul></div></section><section class="rule" id="rule-h"><div class="rk">H</div><div><h3>Deliveries</h3><ul><li>Deliveries should be made between 8:00 AM and 9:00 PM.</li><li>Owners and renters are responsible for making sure all common-area doors are properly locked.</li><li>Owners and renters must clean up after a delivery, including boxes, paper and all other debris.</li></ul></div></section><section class="rule" id="rule-i"><div class="rk">I</div><div><h3>Parking and Vehicles</h3><ul><li>All owners, residents and visitors must follow all parking rules.</li><li>The speed limit throughout the Salem Place parking lot is 5 miles per hour.</li><li>No vehicle may park in another person&#x27;s assigned or numbered space without permission. Blocking anyone&#x27;s access to or from their space is strictly prohibited and subject to immediate towing.</li><li>No vehicle may block building exits or fire lanes.</li><li>All vehicles must be registered and licensed.</li><li>Visitors must park in the spaces marked “Visitor/Guest”: the 5 spaces facing the street and 1 in the main lot near the light.</li><li>Entering or exiting the garage through the wrong door is prohibited and subject to a fine. The entrance and exit doors are clearly marked with arrows. For safety, close the door immediately after entering.</li><li>All vehicles must be moved for snow removal. If you will be away in winter, consider leaving a key with a neighbor. Vehicles not moved are subject to a fine or towing. If you do not have an assigned space, park on the gravel.</li><li>Vehicles on the gravel must always leave room for trash pickup, especially during snowstorms.</li><li>Recreational vehicles and equipment, including bicycles, mopeds, scooters and skis, are not allowed on the premises.</li></ul></div></section><section class="rule" id="rule-j"><div class="rk">J</div><div><h3>Fees, Liens and Fines</h3><ul><li>All condominium charges and assessments are due to the Association on or before the first day of each month, including any late fees from the previous month.</li><li>Checks returned for insufficient funds (NSF) are subject to a $25 handling charge, or up to the maximum allowed by law.</li><li>A $25 late charge applies if a condominium charge or other assessment (including prior late charges) is not received by the 15th of the month. Unpaid balances will be referred to an attorney for collection, and the cost of collection will be charged to the unit.</li></ul><h4>Fines</h4><p class="ri">The Trustees enforce the obligations of unit owners under M.G.L. c. 183A (the Condominium Act), the Master Deed, Declaration of Trust, By-Laws and these Rules and Regulations (together, the “governing documents”), and may levy fines for violations by unit owners, residents and the people they are responsible for:</p><div class="fines"><div><span>1st offense</span><b>Notice and a $50 fine</b></div><div><span>2nd offense</span><b>$100 fine</b></div><div><span>3rd offense</span><b>$150 fine</b></div></div><ul><li>Each day a violation continues after notice is a separate violation.</li><li>Violations that endanger the health, safety or welfare of others, pose a substantial threat to property, or create a substantial or continuing nuisance may be subject to additional fines set by the Trustees.</li><li>The Board of Trustees may also seek all other available remedies. Fines and all related costs are chargeable to the unit owner whose household, guests, tenants, employees, agents or pets are responsible. These assessments are a lien on the unit and may be enforced as permitted by M.G.L. c. 183A, § 6 and c. 254, §§ 5 and 5A.</li></ul></div></section><section class="rule" id="rule-k"><div class="rk">K</div><div><h3>Storage Unit Licenses</h3><p class="ri">Salem Place has 14 storage units in the garage. The Trustees license them only to resident condo owners, first come, first served, from a waiting list kept by the Trustees. Licenses are subject to the following rules:</p><ul><li>Licenses run month to month. The monthly fee set by the Trust is due in advance on the first day of each month, by check payable to Salem Place Condominium Trust.</li><li>Payment more than 10 days late is a default, subject to a $10 late fee and termination of the license.</li><li>Payments are for use and occupancy only and do not create a tenancy.</li><li>The Trust may increase the fee with 30 days&#x27; written notice.</li><li>Each condo unit owner is entitled to only one storage unit. It does not pass to the next owner or tenant when the unit is sold or the tenancy changes. Anyone holding more than one storage unit should discuss it with the Board of Trustees.</li><li>Storage units are for normal and customary use, subject to reasonable rules set by the Board of Trustees, and may not be used for chemicals or hazardous materials.</li><li>A license may not be sold, assigned, transferred or sublet, and ends if the licensee sells or leases the unit or no longer lives at Salem Place.</li><li>The Trust is not an insurer and is not responsible for fire, theft, vandalism, accident, water, loss or damage to the contents of a storage unit. The licensee holds the Trustees and the Trust harmless for any such loss.</li><li>This is a license to store personal property only. It is not a lease and grants no interest in real estate.</li><li>Either party may end the license at any time with 30 days&#x27; written notice. On termination, the licensee must return the keys to the Trustees.</li><li>Failure to follow these rules is a default and grounds for immediate termination. If a license is terminated, the Trustees may remove any items from the storage unit at the licensee&#x27;s sole expense and risk.</li><li>Any notice under these rules is properly served if delivered or mailed to the licensee&#x27;s unit.</li></ul></div></section>
+<p class="closing">The Salem Place Condominium Trust reserves the right to change or modify these Rules and Regulations without notice, to incorporate necessary updates and to comply with federal and state laws.</p>
+</main>
+</div>
+</div>
+
+<footer><div class="wrap">&copy; <span id="y">2026</span> Salem Place Condominium &middot; 292 Salem Street, Revere, MA 02151</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
