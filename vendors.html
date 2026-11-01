@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vendor List | Salem Place Condominium</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d2a33;--muted:#5b6b75;--bg:#fbfaf7;--card:#fff;--line:#e7e2d9;--brand:#2f5d50;--brand2:#c8794a;--soft:#eef3f0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:var(--brand)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.2}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:600;color:var(--brand2);margin-bottom:8px}
+header.nav{position:sticky;top:0;z-index:10;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:Fraunces,serif;font-weight:600;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--brand)}
+nav a{color:var(--ink);text-decoration:none;font-size:.92rem;margin-left:22px;font-weight:500}
+.banner{background:var(--brand);color:#fff;padding:64px 0 56px}
+.banner h1{font-size:clamp(2rem,5vw,3.2rem)}
+.banner p{opacity:.9;max-width:640px;margin-top:10px}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin:-34px 0 0}
+@media(max-width:860px){.res{grid-template-columns:1fr}}
+.rc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 6px 20px rgba(29,42,51,.06)}
+.rc h3{font-size:1.15rem;margin-bottom:6px}
+.rc p{color:var(--muted);font-size:.93rem}
+.rc .btn{margin-top:14px}
+.btn{display:inline-block;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.9rem;background:var(--brand);color:#fff}
+.btn.line{background:transparent;color:var(--brand);border:1.5px solid var(--brand)}
+.doc{display:grid;grid-template-columns:240px 1fr;gap:44px;padding:72px 0}
+@media(max-width:900px){.doc{grid-template-columns:1fr}.toc{display:none}}
+.toc{position:sticky;top:84px;align-self:start}
+.toc a{display:flex;gap:10px;padding:6px 0;color:var(--muted);text-decoration:none;font-size:.9rem;border-bottom:1px solid var(--line)}
+.toc a b{color:var(--brand2);width:14px}
+.toc a:hover{color:var(--brand)}
+.dochead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--brand);padding-bottom:18px;margin-bottom:10px}
+.dochead h2{font-size:clamp(1.6rem,3.4vw,2.2rem)}
+.warn{background:#fbf1e9;border-left:4px solid var(--brand2);padding:14px 18px;border-radius:8px;margin:22px 0 8px;font-size:.95rem}
+.rule{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:30px 0;border-bottom:1px solid var(--line);scroll-margin-top:80px}
+.rk{width:44px;height:44px;border-radius:12px;background:var(--soft);color:var(--brand);font-family:Fraunces,serif;font-weight:600;font-size:1.3rem;display:flex;align-items:center;justify-content:center}
+.rule h3{font-size:1.35rem;margin:6px 0 10px}
+.rule h4{font-size:1.1rem;margin:22px 0 8px}
+.ri{color:var(--muted);margin-bottom:10px}
+.rule ul{list-style:none}
+.rule li{position:relative;padding:6px 0 6px 22px}
+.rule li::before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:50%;background:var(--brand2)}
+.fines{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0 10px}
+.fines div{background:var(--soft);border-radius:12px;padding:14px 16px}
+.fines span{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.fines b{font-family:Fraunces,serif;font-size:1.15rem;color:var(--brand)}
+@media(max-width:600px){.fines{grid-template-columns:1fr}.rule{grid-template-columns:1fr}}
+.closing{color:var(--muted);font-size:.92rem;margin-top:26px}
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+@media print{header.nav,.res,.toc,footer,.dochead .btn{display:none}.banner{padding:20px 0;background:none;color:var(--ink)}.doc{display:block;padding:0}.rule{break-inside:avoid}}
+.wrap2{max-width:1000px;margin:0 auto;padding:0 20px}
+.disc{background:#fbf1e9;border-left:4px solid var(--brand2);border-radius:10px;padding:18px 22px;margin:-30px 0 0;box-shadow:0 6px 20px rgba(29,42,51,.06);font-size:.95rem}
+.disc b{display:block;margin-bottom:4px}
+.vgrid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;padding:40px 0 30px}
+@media(max-width:700px){.vgrid{grid-template-columns:1fr}}
+.vc{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.vc h3{font-size:1.15rem}
+.vc .sub{color:var(--muted);font-size:.88rem;margin-bottom:10px}
+.vc .none{font-size:.9rem;color:var(--muted);font-style:italic}
+.vl{list-style:none}
+.vl li{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;padding:8px 0;border-top:1px solid var(--line)}
+.vl a{color:var(--brand);text-decoration:none;font-weight:500}
+.add{color:var(--muted);font-size:.92rem;padding-bottom:60px}
+nav{display:flex;align-items:center}
+nav a.cta{margin-left:14px;padding:8px 16px;border-radius:999px;font-weight:600;font-size:.88rem}
+nav a.rent-cta{background:var(--brand2);color:#fff}
+nav a.rent-cta:hover{color:#fff;opacity:.9}
+nav a.portal-cta{border:1.5px solid var(--brand);color:var(--brand)}
+nav a.cta,.logo{white-space:nowrap}
+@media(max-width:760px){nav a:not(.cta){display:none}nav a.cta{margin-left:6px;padding:6px 10px;font-size:.74rem}.logo{font-size:1.02rem}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+<a class="logo" href="index.html">Salem <span>Place</span></a>
+<nav><a href="index.html">Home</a><a class="cta rent-cta" href="rentals.html">Units for Rent</a><a class="cta portal-cta" href="residents.html">Residents Portal</a></nav>
+</div></header>
+
+<section class="banner"><div class="wrap">
+<div class="eyebrow" style="color:#f3d2b8"><a href="residents.html" style="color:#f3d2b8;text-decoration:none">Residents Portal</a></div>
+<h1>Vendor &amp; Contractor List</h1>
+<p>Contractors and service providers that Salem Place unit owners have used, shared here for convenience.</p>
+</div></section>
+
+<div class="wrap2">
+<div class="disc"><b>Please read before hiring</b>This list was compiled from names provided by unit owners and is shared only as a convenience. Neither this website, the Salem Place Condominium Trust, its Trustees nor any unit owner recommends, endorses or guarantees any vendor listed. Please check licenses, insurance and references yourself before hiring anyone. Any work affecting common areas, plumbing or the building structure must be approved by the Trustees first.</div>
+
+<div class="vgrid"><div class="vc"><h3>Plumbing</h3><p class="sub">Leaks, fixtures, water heaters</p><ul class="vl"><li><b>Nick Circiello Heating &amp; Plumbing</b><a href="tel:+17818565243">(781) 856-5243</a></li></ul></div><div class="vc"><h3>Electrical</h3><p class="sub">Licensed electricians</p><p class="none">No vendors listed yet.</p></div><div class="vc"><h3>Heating &amp; cooling</h3><p class="sub">Heat pump service and repair</p><ul class="vl"><li><b>Nick Circiello Heating &amp; Plumbing</b><a href="tel:+17818565243">(781) 856-5243</a></li></ul></div><div class="vc"><h3>Appliances</h3><p class="sub">Washer, dryer, kitchen appliance repair</p><p class="none">No vendors listed yet.</p></div><div class="vc"><h3>Handyman</h3><p class="sub">Small repairs, installs, assembly</p><p class="none">No vendors listed yet.</p></div><div class="vc"><h3>Painting</h3><p class="sub">Interior painting</p><ul class="vl"><li><b>JVH Solutions, Inc.</b><a href="tel:+17814200146">(781) 420-0146</a></li></ul></div><div class="vc"><h3>Flooring</h3><p class="sub">Installation and refinishing</p><p class="none">No vendors listed yet.</p></div><div class="vc"><h3>Cleaning</h3><p class="sub">Unit and move-out cleaning</p><p class="none">No vendors listed yet.</p></div><div class="vc"><h3>Movers</h3><p class="sub">Local moving companies</p><p class="none">No vendors listed yet.</p></div><div class="vc"><h3>Locksmith</h3><p class="sub">Lockouts and lock changes</p><p class="none">No vendors listed yet.</p></div></div>
+
+<p class="add">Have a contractor to add? Send the name, trade and phone number to the Trustees.</p>
+</div>
+
+<footer><div class="wrap">&copy; <span id="y">2026</span> Salem Place Condominium &middot; 292 Salem Street, Revere, MA 02151</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
