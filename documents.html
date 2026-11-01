@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Condominium Documents | Salem Place Condominium</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d2a33;--muted:#5b6b75;--bg:#fbfaf7;--card:#fff;--line:#e7e2d9;--brand:#2f5d50;--brand2:#c8794a;--soft:#eef3f0}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:var(--brand)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.2}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:600;color:var(--brand2);margin-bottom:8px}
+header.nav{position:sticky;top:0;z-index:10;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:Fraunces,serif;font-weight:600;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--brand)}
+nav a{color:var(--ink);text-decoration:none;font-size:.92rem;margin-left:22px;font-weight:500}
+.banner{background:var(--brand);color:#fff;padding:64px 0 56px}
+.banner h1{font-size:clamp(2rem,5vw,3.2rem)}
+.banner p{opacity:.9;max-width:640px;margin-top:10px}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:-34px 0 0}
+@media(max-width:1000px){.res{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.res{grid-template-columns:1fr}}
+.rc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 6px 20px rgba(29,42,51,.06)}
+.rc h3{font-size:1.15rem;margin-bottom:6px}
+.rc p{color:var(--muted);font-size:.93rem}
+.rc .btn{margin-top:14px}
+.btn{display:inline-block;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.9rem;background:var(--brand);color:#fff}
+.btn.line{background:transparent;color:var(--brand);border:1.5px solid var(--brand)}
+.doc{display:grid;grid-template-columns:240px 1fr;gap:44px;padding:72px 0}
+@media(max-width:900px){.doc{grid-template-columns:1fr}.toc{display:none}}
+.toc{position:sticky;top:84px;align-self:start}
+.toc a{display:flex;gap:10px;padding:6px 0;color:var(--muted);text-decoration:none;font-size:.9rem;border-bottom:1px solid var(--line)}
+.toc a b{color:var(--brand2);width:14px}
+.toc a:hover{color:var(--brand)}
+.dochead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--brand);padding-bottom:18px;margin-bottom:10px}
+.dochead h2{font-size:clamp(1.6rem,3.4vw,2.2rem)}
+.warn{background:#fbf1e9;border-left:4px solid var(--brand2);padding:14px 18px;border-radius:8px;margin:22px 0 8px;font-size:.95rem}
+.rule{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:30px 0;border-bottom:1px solid var(--line);scroll-margin-top:80px}
+.rk{width:44px;height:44px;border-radius:12px;background:var(--soft);color:var(--brand);font-family:Fraunces,serif;font-weight:600;font-size:1.3rem;display:flex;align-items:center;justify-content:center}
+.rule h3{font-size:1.35rem;margin:6px 0 10px}
+.rule h4{font-size:1.1rem;margin:22px 0 8px}
+.ri{color:var(--muted);margin-bottom:10px}
+.rule ul{list-style:none}
+.rule li{position:relative;padding:6px 0 6px 22px}
+.rule li::before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:50%;background:var(--brand2)}
+.fines{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0 10px}
+.fines div{background:var(--soft);border-radius:12px;padding:14px 16px}
+.fines span{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.fines b{font-family:Fraunces,serif;font-size:1.15rem;color:var(--brand)}
+@media(max-width:600px){.fines{grid-template-columns:1fr}.rule{grid-template-columns:1fr}}
+.closing{color:var(--muted);font-size:.92rem;margin-top:26px}
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+@media print{header.nav,.res,.toc,footer,.dochead .btn{display:none}.banner{padding:20px 0;background:none;color:var(--ink)}.doc{display:block;padding:0}.rule{break-inside:avoid}}
+nav{display:flex;align-items:center}
+nav a.cta{margin-left:14px;padding:8px 16px;border-radius:999px;font-weight:600;font-size:.88rem}
+nav a.rent-cta{background:var(--brand2);color:#fff}
+nav a.rent-cta:hover{color:#fff;opacity:.9}
+nav a.portal-cta{border:1.5px solid var(--brand);color:var(--brand)}
+nav a.cta,.logo{white-space:nowrap}
+@media(max-width:760px){nav a:not(.cta){display:none}nav a.cta{margin-left:6px;padding:6px 10px;font-size:.74rem}.logo{font-size:1.02rem}}
+
+.crumb{color:#f3d2b8;text-decoration:none}
+.crumb:hover{text-decoration:underline}
+.portal{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:-34px 0 0;padding-bottom:72px}
+@media(max-width:760px){.portal{grid-template-columns:1fr}}
+.pc{display:flex;gap:18px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;text-decoration:none;color:var(--ink);box-shadow:0 6px 20px rgba(29,42,51,.06);transition:transform .15s,box-shadow .15s}
+.pc:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(29,42,51,.1)}
+.pc .ic{flex:0 0 46px;height:46px;border-radius:12px;background:var(--soft);color:var(--brand);display:flex;align-items:center;justify-content:center;font-family:Fraunces,serif;font-size:1.3rem;font-weight:600}
+.pc h3{font-size:1.2rem;margin-bottom:4px}
+.pc p{color:var(--muted);font-size:.93rem}
+.pc .go{display:inline-block;margin-top:10px;color:var(--brand);font-weight:600;font-size:.9rem}
+.faq{padding:56px 0 80px;max-width:860px}
+.faq h2{font-size:1.7rem;margin:0 0 6px}
+.faq .intro{color:var(--muted);margin-bottom:22px}
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.03rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--brand2);font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p,.faq details ul{margin-top:10px;color:var(--ink)}
+.faq details ul{padding-left:20px}
+.faq details li{margin:4px 0}
+.docbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin:-34px 0 0;box-shadow:0 6px 20px rgba(29,42,51,.06);display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.docbox h3{font-size:1.2rem}
+.docbox p{color:var(--muted);font-size:.93rem}
+.note{background:#fbf1e9;border-left:4px solid var(--brand2);border-radius:10px;padding:14px 18px;font-size:.9rem;margin-top:28px}
+.empty{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;margin:-34px 0 80px;color:var(--muted)}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+<a class="logo" href="index.html">Salem <span>Place</span></a>
+<nav><a href="about.html">About</a><a href="index.html#about">The Building</a><a href="index.html#trail">Rail Trail</a><a href="index.html#location">Location</a><a href="index.html#neighborhood">Neighborhood</a><a class="cta rent-cta" href="rentals.html">Units for Rent</a><a class="cta portal-cta" href="residents.html">Residents Portal</a></nav>
+</div></header>
+
+<section class="banner"><div class="wrap">
+<div class="eyebrow" style="color:#f3d2b8"><a class="crumb" href="residents.html">Residents Portal</a></div>
+<h1>Condominium Documents</h1>
+<p>The documents that created and govern Salem Place, with answers to common questions.</p>
+</div></section>
+
+<div class="wrap">
+<div style="max-width:860px">
+<div class="docbox"><div><h3>Master Deed, Declaration of Trust &amp; By-Laws</h3><p>Recorded documents, Suffolk County Registry of Deeds. 52 pages, PDF.</p></div><a class="btn" href="Salem-Place-Condominium-Documents.pdf" target="_blank" rel="noopener">Open the documents (PDF)</a></div>
+</div>
+<div class="faq">
+<h2>Frequently asked questions</h2>
+<p class="intro">Plain-English answers drawn from the condominium documents.</p>
+<details><summary>What are the condominium documents?</summary><p>Salem Place is governed by three recorded documents, combined in the PDF above:</p><ul><li><b>Master Deed</b> (December 1987), which created the condominium under Massachusetts General Laws Chapter 183A and describes the land, building, units and common areas.</li><li><b>Declaration of Trust</b>, which created the Salem Place Condominium Trust, the association through which the unit owners run the building.</li><li><b>By-Laws</b>, which set out how the Trustees operate, how the budget and common charges work, insurance and meetings.</li></ul><p>They are recorded with the Suffolk County Registry of Deeds. The Trustees also adopt <a href="rules.html">Rules &amp; Regulations</a> under these documents.</p></details>
+<details><summary>How many units are there, and what sizes?</summary><p>Salem Place has <b>40 units</b> on five floors, eight per floor.</p><ul><li><b>30 two-bedroom, two-bath units</b> (types A and B), about 1,110 to 1,280 square feet.</li><li><b>10 one-bedroom, one-bath units</b> (types C and D), about 677 to 710 square feet.</li></ul><p>Each unit has a kitchen and a combined living and dining room. The full unit schedule is Exhibit B of the Master Deed.</p></details>
+<details><summary>What exactly do I own?</summary><p>You own your unit plus an undivided percentage interest in the common areas and facilities, such as the land, structure, hallways, lobby, elevator, garage and building systems. Each unit's percentage is listed in Exhibit B of the Master Deed and ranges from about 2.06% to 3.08%, with upper-floor and larger units carrying higher percentages.</p><p>Your percentage sets your share of the common expenses and the weight of your vote.</p></details>
+<details><summary>Where does my unit end and the common area begin?</summary><p>In general terms, the Master Deed sets the unit boundaries at the upper surface of the concrete floor, the underside of the ceiling joists, and the exterior surface of the wall studs. Doors and windows are included up to their exterior surfaces. Pipes, wires and ducts that serve other units or the building as a whole are common elements, even when they pass through your unit, and the Trustees have a right of access to maintain them.</p></details>
+<details><summary>Do I have the use of my balcony?</summary><p>Yes. Each unit owner has the exclusive right to use the balcony that their unit opens onto, subject to the maintenance rules adopted by the Trustees. See the balcony section of the <a href="rules.html#rule-b">Rules &amp; Regulations</a>.</p></details>
+<details><summary>How does parking work?</summary><p>The indoor (garage) and outdoor parking spaces are exclusive-use easements. Many spaces were deeded to specific units. Spaces held by the Trust can be assigned by the Trustees, for a period and charge they set, with the money going to the association. Unassigned spaces are available for occasional use by residents and guests under the rules.</p><p>Spaces are for registered private passenger vehicles of occupants. Boats, commercial trucks and other vehicles or items need the Trustees' prior written permission.</p></details>
+<details><summary>Can I rent out my unit?</summary><p>Yes, with these conditions from the Master Deed:</p><ul><li>The lease must be <b>in writing</b> and for the <b>entire unit</b>.</li><li>The minimum term is <b>six months</b>. Short-term or transient rentals are not allowed.</li><li>The lease must state that the tenant is bound by the Master Deed, Trust, By-Laws and Rules, and that a violation is a default under the lease.</li></ul><p>Owners remain responsible for their tenants' conduct and for giving them the rules. Please also let the Trustees know about move-in and move-out dates.</p></details>
+<details><summary>Are pets allowed?</summary><p>Only with the <b>written consent of the Trustees</b>. The Master Deed provides that no animals, birds or pets may be kept in the units or common areas without that consent, and the Trustees can revoke it.</p></details>
+<details><summary>Can I run a business from my unit?</summary><p>Units are for residential use. No business activities may be conducted in a unit except as allowed by the City of Revere zoning ordinance.</p></details>
+<details><summary>Can I make changes to the outside of my unit?</summary><p>Not without the Trustees' prior written consent. To keep the building's appearance uniform, the Master Deed prohibits exterior changes, additions, projections or decorations, changes to exterior lights or door hardware, and painting or decals on any exterior surface or on the inside surface of windows.</p></details>
+<details><summary>How are common charges set and paid?</summary><p>Each year the Board of Trustees estimates the building's expenses, including reserves for future repairs, and divides the budget among the units by percentage interest. Charges are payable monthly, due on the first of the month.</p><p>Unpaid charges accrue interest and late charges and become a lien on the unit under Chapter 183A, Section 6. Current late fees are listed in the <a href="rules.html#rule-j">Rules &amp; Regulations</a>.</p></details>
+<details><summary>Who runs the association?</summary><p>The association acts through its <b>Board of Trustees</b>. The Declaration of Trust provides for an odd number of Trustees, at least three and no more than five, as set by unit owners holding at least 51% of the beneficial interest. The Trustees may hire a managing agent and delegate day-to-day management.</p><p>To reach the Board, see the mailing address on the <a href="about.html">About</a> page.</p></details>
+<details><summary>When is the annual meeting?</summary><p>The By-Laws set the annual meeting of unit owners for the <b>first Monday in December at 7:30 p.m.</b> at the condominium, or at another reasonable place and time within 20 days of that date. Notice is sent to owners in advance.</p></details>
+<details><summary>Who insures the building?</summary><p>The Trustees maintain a master casualty and physical damage policy on the building for the benefit of the Trust, all unit owners and their mortgage lenders, along with other coverage required by the By-Laws. The master policy does not cover your personal belongings. Most owners carry their own unit owner's (HO-6) policy, and renters should carry renter's insurance.</p></details>
+<details><summary>How can the documents be changed?</summary><p>The Master Deed can be amended by a written instrument signed by unit owners holding at least <b>67%</b> of the undivided interests, signed by the Trustees and recorded at the Registry of Deeds. Some changes also need the approval of mortgage lenders. The Trustees can update the Rules &amp; Regulations as provided in the By-Laws.</p></details>
+<div class="note">This summary is provided for convenience only. If anything here differs from the recorded documents, the documents control. The documents may have been amended since they were first recorded, so check with the Trustees on any specific question.</div>
+</div>
+</div>
+
+<footer><div class="wrap">&copy; <span id="y">2026</span> Salem Place Condominium Association &middot; 292 Salem Street, Revere, MA 02151</div></footer>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
