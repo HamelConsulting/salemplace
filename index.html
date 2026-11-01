@@ -24,7 +24,6 @@ header.nav .wrap{display:flex;align-items:center;justify-content:space-between;h
 .logo span{color:var(--brand)}
 nav a{color:var(--ink);text-decoration:none;font-size:.92rem;margin-left:22px;font-weight:500}
 nav a:hover{color:var(--brand)}
-@media(max-width:760px){nav{display:none}}
 .hero{color:#fff;background:var(--brand);padding:64px 0}
 .hero .wrap{display:grid;grid-template-columns:1fr 1.15fr;gap:44px;align-items:center}
 .hero-img{width:100%;aspect-ratio:3/2;object-fit:cover;border-radius:18px;box-shadow:0 18px 40px rgba(0,0,0,.25)}
@@ -73,12 +72,19 @@ section{padding:84px 0}
 .rent .tag{background:rgba(255,255,255,.15);border-radius:999px;padding:8px 16px;font-weight:600;font-size:.9rem}
 footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
 footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+nav{display:flex;align-items:center}
+nav a.cta{margin-left:14px;padding:8px 16px;border-radius:999px;font-weight:600;font-size:.88rem}
+nav a.rent-cta{background:var(--brand2);color:#fff}
+nav a.rent-cta:hover{color:#fff;opacity:.9}
+nav a.portal-cta{border:1.5px solid var(--brand);color:var(--brand)}
+nav a.cta,.logo{white-space:nowrap}
+@media(max-width:760px){nav a:not(.cta){display:none}nav a.cta{margin-left:6px;padding:6px 10px;font-size:.74rem}.logo{font-size:1.02rem}}
 </style>
 </head>
 <body>
 <header class="nav"><div class="wrap">
 <a class="logo" href="#">Salem <span>Place</span></a>
-<nav><a href="#about">The Building</a><a href="#trail">Rail Trail</a><a href="#location">Location</a><a href="#neighborhood">Neighborhood</a><a href="rentals.html">Rentals</a><a href="residents.html">Residents</a></nav>
+<nav><a href="#about">The Building</a><a href="#trail">Rail Trail</a><a href="#location">Location</a><a href="#neighborhood">Neighborhood</a><a class="cta rent-cta" href="rentals.html">Units for Rent</a><a class="cta portal-cta" href="residents.html">Residents Portal</a></nav>
 </div></header>
 
 <section class="hero"><div class="wrap">
@@ -165,7 +171,7 @@ footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 </div>
 </div></section>
 
-<footer><div class="wrap"><span>&copy; <span id="y">2026</span> Salem Place Condominium &middot; 292 Salem Street, Revere, MA 02151</span><span><a href="rentals.html">Rentals</a> &middot; <a href="residents.html">Residents</a></span><span style="flex-basis:100%;font-size:.75rem;opacity:.8">Neighborhood photos via Wikimedia Commons: Kowloon, Saugus (CC BY-SA 3.0); Revere Beach (no known restrictions); Northern Strand Community Trail (CC BY-SA 4.0).</span></div></footer>
+<footer><div class="wrap"><span>&copy; <span id="y">2026</span> Salem Place Condominium &middot; 292 Salem Street, Revere, MA 02151</span><span><a href="rentals.html">Units for Rent</a> &middot; <a href="residents.html">Residents Portal</a></span><span style="flex-basis:100%;font-size:.75rem;opacity:.8">Neighborhood photos via Wikimedia Commons: Kowloon, Saugus (CC BY-SA 3.0); Revere Beach (no known restrictions); Northern Strand Community Trail (CC BY-SA 4.0).</span></div></footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
 </body>
 </html>

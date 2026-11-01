@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Residents | Salem Place Condominium</title>
+<title>Residents Portal | Salem Place Condominium</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,17 +58,24 @@ nav a{color:var(--ink);text-decoration:none;font-size:.92rem;margin-left:22px;fo
 .closing{color:var(--muted);font-size:.92rem;margin-top:26px}
 footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
 @media print{header.nav,.res,.toc,footer,.dochead .btn{display:none}.banner{padding:20px 0;background:none;color:var(--ink)}.doc{display:block;padding:0}.rule{break-inside:avoid}}
+nav{display:flex;align-items:center}
+nav a.cta{margin-left:14px;padding:8px 16px;border-radius:999px;font-weight:600;font-size:.88rem}
+nav a.rent-cta{background:var(--brand2);color:#fff}
+nav a.rent-cta:hover{color:#fff;opacity:.9}
+nav a.portal-cta{border:1.5px solid var(--brand);color:var(--brand)}
+nav a.cta,.logo{white-space:nowrap}
+@media(max-width:760px){nav a:not(.cta){display:none}nav a.cta{margin-left:6px;padding:6px 10px;font-size:.74rem}.logo{font-size:1.02rem}}
 </style>
 </head>
 <body>
 <header class="nav"><div class="wrap">
 <a class="logo" href="index.html">Salem <span>Place</span></a>
-<nav><a href="index.html">Home</a><a href="rentals.html">Rentals</a><a href="residents.html">Residents</a></nav>
+<nav><a href="index.html">Home</a><a class="cta rent-cta" href="rentals.html">Units for Rent</a><a class="cta portal-cta" href="residents.html">Residents Portal</a></nav>
 </div></header>
 
 <section class="banner"><div class="wrap">
 <div class="eyebrow" style="color:#f3d2b8">Owners &amp; residents</div>
-<h1>Resident Resources</h1>
+<h1>Residents Portal</h1>
 <p>Building rules, association documents and information for the people who live at Salem Place.</p>
 </div></section>
 
