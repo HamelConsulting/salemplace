@@ -97,6 +97,20 @@ nav a{white-space:nowrap}
 @media(max-width:760px){.logo{white-space:normal}.lname{font-size:.95rem;line-height:1.05;max-width:118px}nav a.cta{white-space:nowrap}}
 @media(max-width:560px){.ltag{display:none}}
 @media(max-width:420px){.lmark{width:26px;height:26px;flex-basis:26px}.logo{gap:7px}nav a.cta{margin-left:4px;padding:6px 9px}}
+.cform{max-width:760px;padding:8px 0 80px;scroll-margin-top:84px}
+.cform h2{font-size:1.7rem;margin-bottom:6px}
+.cintro{color:var(--muted);margin-bottom:20px}
+.cform form{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;box-shadow:0 6px 20px rgba(29,42,51,.06)}
+.cform label{display:block;font-weight:600;font-size:.9rem;margin-bottom:14px}
+.cform .opt{font-weight:400;color:var(--muted)}
+.cform input,.cform select,.cform textarea{display:block;width:100%;margin-top:6px;padding:10px 12px;border:1px solid var(--line);border-radius:10px;font:inherit;font-weight:400;background:#fff;color:var(--ink)}
+.cform input:focus,.cform select:focus,.cform textarea:focus{outline:2px solid var(--brand);outline-offset:1px}
+.frow{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:600px){.frow{grid-template-columns:1fr;gap:0}}
+.cform .btn{border:0;cursor:pointer;font:600 .95rem Inter,system-ui,sans-serif;padding:12px 22px}
+.cform .btn[disabled]{opacity:.6;cursor:default}
+.fstatus{margin-top:12px;font-size:.93rem}
+.fstatus.ok{color:#1d6b45}.fstatus.err{color:#a2462a}
 </style>
 </head>
 <body>
@@ -122,10 +136,44 @@ nav a{white-space:nowrap}
 <div class="mail">
 <h3>Contact the Board of Trustees</h3>
 <address>Salem Place Condominium Association<br>Attn: Board of Trustees<br>292 Salem Street<br>Revere, MA 02151</address>
-<p>Please send correspondence to the Board by mail at the address above.</p>
+<p>Send a message online using the form below, or write to the Board at the address above.</p>
 </div>
 </div>
+
+<section class="cform" id="contact">
+<h2>Send a message</h2>
+<p class="cintro">Questions for the Board of Trustees about the building, moves, deliveries, parking or storage. The association does not rent or sell units; for a specific unit, please contact its owner.</p>
+<form id="contact-form" novalidate>
+<input type="hidden" name="access_key" value="0193f823-4c72-4d3c-9b3c-c37e050d600a">
+<input type="hidden" name="subject" value="New inquiry from Salem Place website">
+<input type="hidden" name="from_name" value="Salem Place Contact Form">
+<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+<div class="frow">
+<label>Name<input type="text" name="name" required autocomplete="name"></label>
+<label>Email<input type="email" name="email" required autocomplete="email"></label>
 </div>
+<div class="frow">
+<label>Phone <span class="opt">(optional)</span><input type="tel" name="phone" autocomplete="tel"></label>
+<label>Unit number <span class="opt">(if you live here)</span><input type="text" name="unit" inputmode="numeric" maxlength="4"></label>
+</div>
+<label>Topic<select name="topic"><option>General question</option><option>Move in or move out</option><option>Parking</option><option>Storage unit</option><option>Maintenance or common areas</option><option>Other</option></select></label>
+<label>Message<textarea name="message" rows="6" required></textarea></label>
+<button type="submit" class="btn">Send message</button>
+<p class="fstatus" id="fstatus" role="status" aria-live="polite"></p>
+</form>
+</section>
+</div>
+
+<script>
+(function(){var f=document.getElementById('contact-form'),s=document.getElementById('fstatus'),b=f.querySelector('button');
+f.addEventListener('submit',function(e){e.preventDefault();
+if(!f.checkValidity()){s.className='fstatus err';s.textContent='Please fill in your name, a valid email and a message.';return}
+b.disabled=true;b.textContent='Sending...';s.className='fstatus';s.textContent='';
+fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Accept':'application/json'},body:new FormData(f)})
+.then(function(r){return r.json()}).then(function(d){if(d.success){f.reset();s.className='fstatus ok';s.textContent='Thank you. Your message was sent to the Board of Trustees.'}else{throw new Error(d.message||'')}})
+.catch(function(){s.className='fstatus err';s.textContent='Sorry, the message could not be sent. Please try again or write to the Board by mail.'})
+.finally(function(){b.disabled=false;b.textContent='Send message'})})})();
+</script>
 
 <footer><div class="wrap"><span>&copy; <span id="y">2026</span> Salem Place Condominium Association &middot; 292 Salem Street, Revere, MA 02151</span><span class="flinks"><a href="rentals.html">Units for Rent</a> &middot; <a href="residents.html">Residents Portal</a> &middot; <a href="about.html">About</a></span></div></footer>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
