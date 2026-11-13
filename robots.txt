@@ -1,0 +1,19 @@
+# SalemPlaceCondo.com
+# Public pages are open to search engines and AI crawlers
+# (including Googlebot, Bingbot, Google-Extended, GPTBot, OAI-SearchBot, ClaudeBot, PerplexityBot).
+# Residents Portal pages and condominium documents are not for indexing.
+
+User-agent: *
+Allow: /
+Disallow: /residents
+Disallow: /units
+Disallow: /owners
+Disallow: /parking
+Disallow: /rules
+Disallow: /documents
+Disallow: /announcements
+Disallow: /vendors
+Disallow: /login
+Disallow: /*.pdf$
+
+Sitemap: https://salemplacecondo.com/sitemap.xml
