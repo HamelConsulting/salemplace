@@ -155,6 +155,24 @@ nav a{white-space:nowrap}
 .sumrow b{font-family:Fraunces,serif;font-size:1.2rem;color:var(--brand)}
 @media(max-width:700px){.sumrow{grid-template-columns:repeat(2,1fr)}}
 @media print{.ubar,.pbar{display:none}.uc{break-inside:avoid;box-shadow:none}}
+.clink{margin-left:8px;font-size:.78rem;font-weight:600;color:var(--brand2);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;font-family:inherit}
+.clink:hover{color:var(--brand)}
+.mback{position:fixed;inset:0;background:rgba(20,30,40,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+.mback.on{display:flex}
+.modal{background:#fff;border-radius:18px;max-width:520px;width:100%;max-height:92vh;overflow:auto;padding:24px 24px 20px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.modal h3{font-size:1.35rem;margin-bottom:4px}
+.modal .sub{color:var(--muted);font-size:.88rem;margin-bottom:14px}
+.modal label{display:block;font-size:.82rem;font-weight:600;margin:10px 0 0}
+.modal input,.modal textarea{display:block;width:100%;margin-top:4px;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:.93rem}
+.modal input:focus,.modal textarea:focus{outline:none;border-color:var(--brand)}
+.modal .opt{font-weight:400;color:var(--muted)}
+.mact{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+.mact button{padding:10px 18px;border-radius:999px;font:inherit;font-weight:600;font-size:.9rem;cursor:pointer;border:1.5px solid var(--brand)}
+.mact .send{background:var(--brand);color:#fff}
+.mact .cancel{background:#fff;color:var(--brand)}
+.mact button:disabled{opacity:.6;cursor:default}
+.mstat{font-size:.88rem;margin-top:10px;min-height:1.2em}
+.mstat.ok{color:#2e7d4f}.mstat.err{color:#b4442c}
 </style>
 </head>
 <body>
@@ -180,12 +198,28 @@ nav a{white-space:nowrap}
 <div id="list"></div>
 </div>
 </div>
+<div class="mback" id="mback" role="dialog" aria-modal="true" aria-labelledby="mtitle">
+<form class="modal" id="mform" novalidate>
+<h3 id="mtitle">Contact</h3>
+<p class="sub">Your message is delivered privately. Their email address is never shown, and yours is shared only so they can reply.</p>
+<input type="hidden" name="unit"><input type="hidden" name="role">
+<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+<label>Your name<input type="text" name="name" required autocomplete="name" maxlength="200"></label>
+<label>Your email<input type="email" name="email" required autocomplete="email" maxlength="200"></label>
+<label>Phone <span class="opt">(optional)</span><input type="tel" name="phone" autocomplete="tel" maxlength="50"></label>
+<label>Message<textarea name="message" rows="5" required maxlength="5000"></textarea></label>
+<p class="mstat" id="mstat" role="status" aria-live="polite"></p>
+<div class="mact"><button type="button" class="cancel" id="mcancel">Close</button><button type="submit" class="send" id="msend">Send message</button></div>
+</form>
+</div>
 <footer><div class="wrap"><span>&copy; <span id="y">2026</span> Salem Place Condominium Association &middot; 292 Salem Street, Revere, MA 02151</span><span class="flinks"><a href="rentals.html">Units for Rent</a> &middot; <a href="residents.html">Residents Portal</a> &middot; <a href="about.html">About</a> &middot; <a href="contact.html">Contact</a></span></div></footer>
 <script>
 var U=[{"u":"101","f":1,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1280,"pct":2.61,"pk":[["o",40]],"owner":["Gonzalez-Bonasoro Maria Monica"],"resident":"","val":428500,"sd":"4/27/2021","sp":390000,"bk":"65364-222","pid":"33-481-10-101"},{"u":"102","f":1,"t":"C","beds":1,"baths":1,"rooms":3,"sf":677,"pct":2.06,"pk":[["o",44]],"owner":["Depaolis Marie"],"resident":"","val":320700,"sd":"1/13/1997","sp":55000,"bk":"21140/5","pid":"33-481-10-102"},{"u":"103","f":1,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1130,"pct":2.43,"pk":[["o",28]],"owner":["Bartusevicius Aldas","Bartuseviciene Sigita"],"resident":"","val":401500,"sd":"12/7/2007","sp":194250,"bk":"42820-281","pid":"33-481-10-103"},{"u":"104","f":1,"t":"B","beds":2,"baths":2,"rooms":4,"sf":1135,"pct":2.43,"pk":[["o",31]],"owner":["Pisacreta Realty Trust","Pisacreta John D","Pisacreta Teresa"],"resident":"","val":402100,"sd":"8/29/1997","sp":1,"bk":"21711/111","pid":"33-481-10-104"},{"u":"105","f":1,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1130,"pct":2.43,"pk":[["g",24],["o",55]],"owner":["Pena Eliana T"],"resident":"","val":412900,"sd":"11/7/2014","sp":197500,"bk":"53686-282","pid":"33-481-10-105"},{"u":"106","f":1,"t":"B","beds":2,"baths":2,"rooms":4,"sf":1135,"pct":2.43,"pk":[["o",52]],"owner":["Esposito Vincent J","Esposito Christine M"],"resident":"","val":402100,"sd":"12/16/2002","sp":1,"bk":"30140-270","pid":"33-481-10-106"},{"u":"107","f":1,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1110,"pct":2.43,"pk":[["o",35]],"owner":["Ramirez Gracia M","Arguijo Lissian Karina Ordonez"],"resident":"","val":399300,"sd":"2/13/2024","sp":1,"bk":"69885-182","pid":"33-481-10-107"},{"u":"108","f":1,"t":"D","beds":1,"baths":1,"rooms":3,"sf":710,"pct":2.06,"pk":[["o",33]],"owner":["Peguero Julissa"],"resident":"","val":311700,"sd":"2/27/2015","sp":187000,"bk":"54113-88","pid":"33-481-10-108"},{"u":"201","f":2,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1280,"pct":2.71,"pk":[["g",12]],"owner":["J&D Nominee Trust","Hamel John D, Trustee"],"resident":"","val":418200,"sd":"2/19/2011","sp":99,"bk":"47628-64","pid":"33-481-10-201"},{"u":"202","f":2,"t":"C","beds":1,"baths":1,"rooms":3,"sf":677,"pct":2.09,"pk":[["o",60]],"owner":["Monteiro David W"],"resident":"","val":303700,"sd":"9/1/2010","sp":92000,"bk":"46872-182","pid":"33-481-10-202"},{"u":"203","f":2,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1130,"pct":2.47,"pk":[["g",16],["g",22]],"owner":["Dennis JR Philip E","Dennis Antonette L"],"resident":"","val":402200,"sd":"2/2/2011","sp":99,"bk":"47572-42","pid":"33-481-10-203"},{"u":"204","f":2,"t":"B","beds":2,"baths":2,"rooms":4,"sf":1135,"pct":2.47,"pk":[["o",38]],"owner":["Sciortino Christopher V"],"resident":"","val":410200,"sd":"4/24/2024","sp":450000,"bk":"70117-206","pid":"33-481-10-204"},{"u":"205","f":2,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1130,"pct":2.47,"pk":[["g",4],["o",57]],"owner":["Mirza Bashar Ahmad","Mirza Ayad Bashar"],"resident":"","val":401500,"sd":"3/31/2022","sp":353000,"bk":"67440-115","pid":"33-481-10-205"},{"u":"206","f":2,"t":"B","beds":2,"baths":2,"rooms":4,"sf":1135,"pct":2.47,"pk":[["g",10],["o",39]],"owner":["Senecal Luz"],"resident":"","val":410700,"sd":"10/26/2020","sp":99,"bk":"64089-90","pid":"33-481-10-206"},{"u":"207","f":2,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1110,"pct":2.47,"pk":[["o",62]],"owner":["Contarino Debra"],"resident":"","val":399300,"sd":"6/28/1996","sp":71500,"bk":"20677/324","pid":"33-481-10-207"},{"u":"208","f":2,"t":"D","beds":1,"baths":1,"rooms":3,"sf":710,"pct":2.09,"pk":[["g",17],["o",49]],"owner":["Drinkwater Family Trust","Drinkwater Richard A, Trustee"],"resident":"","val":311700,"sd":"12/9/2013","sp":1,"bk":"52684-212","pid":"33-481-10-208"},{"u":"301","f":3,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1280,"pct":2.75,"pk":[["g",7],["o",45]],"owner":["William J Doyle JR Declaration Of Trust","Doyle JR William J, Trustee"],"resident":"","val":418200,"sd":"11/17/2017","sp":10,"bk":"58839-136","pid":"33-481-10-301"},{"u":"302","f":3,"t":"C","beds":1,"baths":1,"rooms":3,"sf":677,"pct":2.15,"pk":[["g",20],["o",47]],"owner":["Xheka Romeo","Xheka Mimoza"],"resident":"","val":299800,"sd":"11/21/2014","sp":152500,"bk":"53747-303","pid":"33-481-10-302"},{"u":"303","f":3,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1130,"pct":2.52,"pk":[["g",6]],"owner":["Zanetta Felix","Zanetta Olga"],"resident":"","val":402200,"sd":"1/6/1995","sp":65000,"bk":"19546/289","pid":"33-481-10-303"},{"u":"304","f":3,"t":"B","beds":2,"baths":2,"rooms":4,"sf":1135,"pct":2.52,"pk":[["o",29]],"owner":["Kaplan Mary Ann"],"resident":"","val":402100,"sd":"1/15/2004","sp":239000,"bk":"33643/077","pid":"33-481-10-304"},{"u":"305","f":3,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1130,"pct":2.52,"pk":[["o",32]],"owner":["Rummel Mary Ann"],"resident":"","val":402500,"sd":"6/8/1998","sp":96000,"bk":"22546/14","pid":"33-481-10-305"},{"u":"306","f":3,"t":"B","beds":2,"baths":2,"rooms":4,"sf":1135,"pct":2.52,"pk":[["g",5],["o",50]],"owner":["Tran Dang Ngoc"],"resident":"","val":402700,"sd":"9/11/2017","sp":279900,"bk":"58518-168","pid":"33-481-10-306"},{"u":"307","f":3,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1110,"pct":2.52,"pk":[["g",18],["o",43]],"owner":["Cuhna Charles F","Cuhna Wanderlene F"],"resident":"","val":399300,"sd":"9/23/2016","sp":220000,"bk":"56933-87","pid":"33-481-10-307"},{"u":"308","f":3,"t":"D","beds":1,"baths":1,"rooms":3,"sf":710,"pct":2.15,"pk":[["g",3],["o",53]],"owner":["Molina Yolanda"],"resident":"","val":312200,"sd":"11/4/2024","sp":327500,"bk":"70776-290","pid":"33-481-10-308"},{"u":"401","f":4,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1280,"pct":2.9,"pk":[["g",26],["o",34]],"owner":["Flejtar Anita","Brizuela Hernan"],"resident":"","val":473500,"sd":"2/27/2016","sp":260000,"bk":"55809-328","pid":"33-481-10-401"},{"u":"402","f":4,"t":"C","beds":1,"baths":1,"rooms":3,"sf":677,"pct":2.21,"pk":[["g",1],["o",61]],"owner":["Simpson Ronald R"],"resident":"","val":336400,"sd":"7/5/2011","sp":94000,"bk":"48176-237","pid":"33-481-10-402"},{"u":"403","f":4,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1130,"pct":2.67,"pk":[["g",8],["o",41]],"owner":["Carreno Pedro"],"resident":"","val":483700,"sd":"7/13/2010","sp":175000,"bk":"46648-107","pid":"33-481-10-403"},{"u":"404","f":4,"t":"B","beds":2,"baths":2,"rooms":4,"sf":1135,"pct":2.67,"pk":[["g",13],["o",54]],"owner":["Wilco Realty Trust II","Galla SR William F, Trustee"],"resident":"","val":451000,"sd":"3/29/1996","sp":80000,"bk":"20450/226","pid":"33-481-10-404"},{"u":"405","f":4,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1130,"pct":2.67,"pk":[["o",30]],"owner":["Polci Stephanie"],"resident":"","val":450300,"sd":"1/19/2007","sp":240000,"bk":"41155-210","pid":"33-481-10-405"},{"u":"406","f":4,"t":"B","beds":2,"baths":2,"rooms":4,"sf":1135,"pct":2.67,"pk":[["g",23]],"owner":["Palmer Family Trust","Hultgren Brenda J, Trustee"],"resident":"","val":451000,"sd":"1/24/2023","sp":99,"bk":"68701-62","pid":"33-481-10-406"},{"u":"407","f":4,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1110,"pct":2.67,"pk":[["g",27],["o",42]],"owner":["Chibane Mourad"],"resident":"","val":447800,"sd":"8/25/2017","sp":260000,"bk":"58493-150","pid":"33-481-10-407"},{"u":"408","f":4,"t":"D","beds":1,"baths":1,"rooms":3,"sf":710,"pct":2.21,"pk":[["g",15],["o",48]],"owner":["Daniel C Marfione Grantor Trust","Marfione Daniel C, Trustee"],"resident":"","val":350200,"sd":"4/8/2024","sp":1,"bk":"70124-157","pid":"33-481-10-408"},{"u":"501","f":5,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1280,"pct":3.08,"pk":[["g",25],["o",56]],"owner":["Builes Kenny"],"resident":"","val":484200,"sd":"1/5/2023","sp":459000,"bk":"68596-299","pid":"33-481-10-501"},{"u":"502","f":5,"t":"C","beds":1,"baths":1,"rooms":3,"sf":677,"pct":2.24,"pk":[["g",19],["o",51]],"owner":["Haggis Deanna"],"resident":"","val":336400,"sd":"7/28/1997","sp":54500,"bk":"21594/292","pid":"33-481-10-502"},{"u":"503","f":5,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1130,"pct":2.8,"pk":[["g",11],["o",58]],"owner":["J&D Nominee Trust","Hamel, Trustee"],"resident":"","val":450300,"sd":"12/5/2025","sp":400000,"bk":"72207-247","pid":"33-481-10-503"},{"u":"504","f":5,"t":"B","beds":2,"baths":2,"rooms":4,"sf":1135,"pct":2.8,"pk":[["g",2],["o",59]],"owner":["Tobon Luis A"],"resident":"","val":460200,"sd":"9/10/2024","sp":460000,"bk":"70597-294","pid":"33-481-10-504"},{"u":"505","f":5,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1130,"pct":2.8,"pk":[["o",37]],"owner":["Loncarevic Marija","Loncarevic Aleksandar"],"resident":"","val":457700,"sd":"8/20/2020","sp":380000,"bk":"63674-189","pid":"33-481-10-505"},{"u":"506","f":5,"t":"B","beds":2,"baths":2,"rooms":4,"sf":1135,"pct":2.8,"pk":[["g",21]],"owner":["Morrissey Carol"],"resident":"","val":451000,"sd":"11/3/2003","sp":238000,"bk":"33167/259","pid":"33-481-10-506"},{"u":"507","f":5,"t":"A","beds":2,"baths":2,"rooms":4,"sf":1110,"pct":2.8,"pk":[["g",9],["o",36]],"owner":["Simpson Chris A"],"resident":"","val":447800,"sd":"7/30/2004","sp":255000,"bk":"35152-138","pid":"33-481-10-507"},{"u":"508","f":5,"t":"D","beds":1,"baths":1,"rooms":3,"sf":710,"pct":2.24,"pk":[["g",14],["o",46]],"owner":["Otero Antonio V"],"resident":"","val":353400,"sd":"7/17/2017","sp":215000,"bk":"58303-255","pid":"33-481-10-508"}];
 function money(n){return "$"+n.toLocaleString("en-US")}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
 var ord=["","1st","2nd","3rd","4th","5th"];
+var CW="https://salemplace-contact.jhamel-209.workers.dev",CON={};
+function clink(u,r){return CON[u]&&CON[u].indexOf(r)>-1?'<button type="button" class="clink" data-u="'+u+'" data-r="'+r+'">Contact</button>':''}
 function card(u){
  var pk=u.pk.length?u.pk.map(function(p){return '<span class="sp '+p[0]+'">'+p[1]+'</span>'}).join(""):'<span class="none">None deeded</span>';
  var sale=u.sp<1000?u.sd+' (nominal)':u.sd+', '+money(u.sp);
@@ -193,8 +227,8 @@ function card(u){
  '<div class="uh"><b>'+u.u+'</b><span class="ut">Type '+u.t+' &middot; '+ord[u.f]+' floor</span></div>'+
  '<div class="uf"><div><span>Bed / bath</span><strong>'+u.beds+' / '+u.baths+'</strong></div><div><span>Sq ft</span><strong>'+u.sf.toLocaleString("en-US")+'</strong></div><div><span>Interest</span><strong>'+u.pct.toFixed(2)+'%</strong></div></div>'+
  '<div class="ur"><span class="k">Parking</span>'+pk+'</div>'+
- '<div class="ur"><span class="k">Owner of record</span>'+u.owner.map(esc).join('<br>')+'</div>'+
- '<div class="ur"><span class="k">Resident</span>'+(u.resident?esc(u.resident):'<span class="none">Not listed</span>')+'</div>'+
+ '<div class="ur"><span class="k">Owner of record'+clink(u.u,'owner')+'</span>'+u.owner.map(esc).join('<br>')+'</div>'+
+ '<div class="ur"><span class="k">Resident'+clink(u.u,'resident')+'</span>'+(u.resident?esc(u.resident):'<span class="none">Not listed</span>')+'</div>'+
  '<dl class="ua"><dt>Assessed (FY2026)</dt><dd>'+money(u.val)+'</dd><dt>Last sale</dt><dd>'+sale+'</dd><dt>Deed</dt><dd>'+u.bk+'</dd><dt>Parcel</dt><dd>'+u.pid+'</dd></dl>'+
  '</div>';
 }
@@ -222,6 +256,40 @@ function render(){
  document.getElementById("q").addEventListener("input",render);
  render();
  if(location.hash){var el=document.querySelector(location.hash);if(el)el.scrollIntoView()}
+})();
+</script>
+<script>
+(function(){
+ var bk=document.getElementById("mback"),f=document.getElementById("mform"),st=document.getElementById("mstat"),sb=document.getElementById("msend");
+ function close(){bk.classList.remove("on")}
+ function open(u,r){f.reset();f.unit.value=u;f.role.value=r;st.className="mstat";st.textContent="";sb.disabled=false;sb.textContent="Send message";
+  document.getElementById("mtitle").textContent="Contact the "+r+" of Unit "+u;bk.classList.add("on");setTimeout(function(){f.name.focus()},50)}
+ document.getElementById("list").addEventListener("click",function(e){var b=e.target.closest(".clink");if(b)open(b.dataset.u,b.dataset.r)});
+ document.getElementById("mcancel").addEventListener("click",close);
+ bk.addEventListener("click",function(e){if(e.target===bk)close()});
+ document.addEventListener("keydown",function(e){if(e.key==="Escape")close()});
+ function fail(m){st.className="mstat err";st.textContent=m;sb.disabled=false;sb.textContent="Send message"}
+ f.addEventListener("submit",function(e){e.preventDefault();
+  if(!f.checkValidity())return fail("Please enter your name, a valid email and a message.");
+  sb.disabled=true;sb.textContent="Sending...";st.className="mstat";st.textContent="";
+  var d={unit:f.unit.value,role:f.role.value,name:f.name.value,email:f.email.value,phone:f.phone.value,message:f.message.value,botcheck:f.botcheck.checked?"1":""};
+  fetch(CW+"/api/unit-contact",{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)})
+  .then(function(r){return r.json().then(function(j){return{s:r.status,j:j}})})
+  .then(function(x){
+   if(!x.j.success){throw new Error(x.s===429?"You have sent several messages today. Please try again tomorrow.":x.s===404?"This unit can no longer be contacted through the site.":"")}
+   if(x.j.relay!=="web3forms")return true;
+   var fd=new FormData();
+   fd.append("access_key","0193f823-4c72-4d3c-9b3c-c37e050d600a");
+   fd.append("subject","Message for the "+d.role+" of Unit "+d.unit+" (Salem Place website)");
+   fd.append("from_name","Salem Place Unit Contact");
+   fd.append("replyto",d.email);
+   ["name","email","phone","unit","message"].forEach(function(k){fd.append(k,d[k])});
+   return fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Accept":"application/json"},body:fd}).then(function(r){return r.json()}).then(function(w){if(!w.success)throw new Error("")})
+  })
+  .then(function(){st.className="mstat ok";st.textContent="Thank you. Your message was sent to the "+d.role+" of Unit "+d.unit+".";sb.textContent="Sent";f.name.value=f.email.value=f.phone.value=f.message.value=""})
+  .catch(function(err){fail(err.message||"Sorry, the message could not be sent. Please try again later.")})
+ });
+ fetch(CW+"/api/units/contactable",{cache:"no-store"}).then(function(r){return r.json()}).then(function(j){CON=j.units||{};render()}).catch(function(){});
 })();
 </script>
 <script>document.getElementById('y').textContent=new Date().getFullYear()</script>
