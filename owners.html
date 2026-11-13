@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<script>(function(){var ok=false;try{ok=localStorage.getItem("sp_portal")==="7f3806e77be78814"||sessionStorage.getItem("sp_portal")==="7f3806e77be78814"}catch(e){}if(!ok){location.replace("login.html?next="+encodeURIComponent(location.pathname.split("/").pop()||"residents.html"))}})();</script>
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Owners &amp; Renters | Salem Place Condominium</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#1d2a33;--muted:#5b6b75;--bg:#fbfaf7;--card:#fff;--line:#e7e2d9;--brand:#1f3a5f;--brand2:#c8794a;--soft:#edf1f7}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:var(--brand)}
+.wrap{max-width:1120px;margin:0 auto;padding:0 20px}
+h1,h2,h3,h4{font-family:Fraunces,Georgia,serif;font-weight:600;line-height:1.2}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.78rem;font-weight:600;color:var(--brand2);margin-bottom:8px}
+header.nav{position:sticky;top:0;z-index:10;background:rgba(251,250,247,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:Fraunces,serif;font-weight:600;font-size:1.25rem;color:var(--ink);text-decoration:none}
+.logo span{color:var(--brand)}
+nav a{color:var(--ink);text-decoration:none;font-size:.92rem;margin-left:22px;font-weight:500}
+.banner{background:var(--brand);color:#fff;padding:64px 0 56px}
+.banner h1{font-size:clamp(2rem,5vw,3.2rem)}
+.banner p{opacity:.9;max-width:640px;margin-top:10px}
+.res{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:-34px 0 0}
+@media(max-width:1000px){.res{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.res{grid-template-columns:1fr}}
+.rc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;box-shadow:0 6px 20px rgba(29,42,51,.06)}
+.rc h3{font-size:1.15rem;margin-bottom:6px}
+.rc p{color:var(--muted);font-size:.93rem}
+.rc .btn{margin-top:14px}
+.btn{display:inline-block;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;font-size:.9rem;background:var(--brand);color:#fff}
+.btn.line{background:transparent;color:var(--brand);border:1.5px solid var(--brand)}
+.doc{display:grid;grid-template-columns:240px 1fr;gap:44px;padding:72px 0}
+@media(max-width:900px){.doc{grid-template-columns:1fr}.toc{display:none}}
+.toc{position:sticky;top:84px;align-self:start}
+.toc a{display:flex;gap:10px;padding:6px 0;color:var(--muted);text-decoration:none;font-size:.9rem;border-bottom:1px solid var(--line)}
+.toc a b{color:var(--brand2);width:14px}
+.toc a:hover{color:var(--brand)}
+.dochead{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;border-bottom:2px solid var(--brand);padding-bottom:18px;margin-bottom:10px}
+.dochead h2{font-size:clamp(1.6rem,3.4vw,2.2rem)}
+.warn{background:#fbf1e9;border-left:4px solid var(--brand2);padding:14px 18px;border-radius:8px;margin:22px 0 8px;font-size:.95rem}
+.rule{display:grid;grid-template-columns:52px 1fr;gap:18px;padding:30px 0;border-bottom:1px solid var(--line);scroll-margin-top:80px}
+.rk{width:44px;height:44px;border-radius:12px;background:var(--soft);color:var(--brand);font-family:Fraunces,serif;font-weight:600;font-size:1.3rem;display:flex;align-items:center;justify-content:center}
+.rule h3{font-size:1.35rem;margin:6px 0 10px}
+.rule h4{font-size:1.1rem;margin:22px 0 8px}
+.ri{color:var(--muted);margin-bottom:10px}
+.rule ul{list-style:none}
+.rule li{position:relative;padding:6px 0 6px 22px}
+.rule li::before{content:"";position:absolute;left:2px;top:15px;width:7px;height:7px;border-radius:50%;background:var(--brand2)}
+.fines{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin:12px 0 10px}
+.fines div{background:var(--soft);border-radius:12px;padding:14px 16px}
+.fines span{display:block;font-size:.8rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.fines b{font-family:Fraunces,serif;font-size:1.15rem;color:var(--brand)}
+@media(max-width:600px){.fines{grid-template-columns:1fr}.rule{grid-template-columns:1fr}}
+.closing{color:var(--muted);font-size:.92rem;margin-top:26px}
+footer{padding:40px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
+@media print{header.nav,.res,.toc,footer,.dochead .btn{display:none}.banner{padding:20px 0;background:none;color:var(--ink)}.doc{display:block;padding:0}.rule{break-inside:avoid}}
+nav{display:flex;align-items:center}
+nav a.cta{margin-left:14px;padding:8px 16px;border-radius:999px;font-weight:600;font-size:.88rem}
+nav a.rent-cta{background:var(--brand2);color:#fff}
+nav a.rent-cta:hover{color:#fff;opacity:.9}
+nav a.portal-cta{border:1.5px solid var(--brand);color:var(--brand)}
+nav a.cta,.logo{white-space:nowrap}
+@media(max-width:760px){nav a:not(.cta){display:none}nav a.cta{margin-left:6px;padding:6px 10px;font-size:.74rem}.logo{font-size:1.02rem}}
+
+.crumb{color:#f3d2b8;text-decoration:none}
+.crumb:hover{text-decoration:underline}
+.portal{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin:-34px 0 0;padding-bottom:72px}
+@media(max-width:760px){.portal{grid-template-columns:1fr}}
+.pc{display:flex;gap:18px;align-items:flex-start;background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;text-decoration:none;color:var(--ink);box-shadow:0 6px 20px rgba(29,42,51,.06);transition:transform .15s,box-shadow .15s}
+.pc:hover{transform:translateY(-2px);box-shadow:0 10px 26px rgba(29,42,51,.1)}
+.pc .ic{flex:0 0 46px;height:46px;border-radius:12px;background:var(--soft);color:var(--brand);display:flex;align-items:center;justify-content:center;font-family:Fraunces,serif;font-size:1.3rem;font-weight:600}
+.pc h3{font-size:1.2rem;margin-bottom:4px}
+.pc p{color:var(--muted);font-size:.93rem}
+.pc .go{display:inline-block;margin-top:10px;color:var(--brand);font-weight:600;font-size:.9rem}
+.faq{padding:56px 0 80px;max-width:860px}
+.faq h2{font-size:1.7rem;margin:0 0 6px}
+.faq .intro{color:var(--muted);margin-bottom:22px}
+.faq details{border-bottom:1px solid var(--line);padding:16px 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:1.03rem;list-style:none;display:flex;justify-content:space-between;gap:16px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--brand2);font-size:1.3rem;line-height:1}
+.faq details[open] summary::after{content:"\2212"}
+.faq details p,.faq details ul{margin-top:10px;color:var(--ink)}
+.faq details ul{padding-left:20px}
+.faq details li{margin:4px 0}
+.docbox{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px;margin:-34px 0 0;box-shadow:0 6px 20px rgba(29,42,51,.06);display:flex;justify-content:space-between;align-items:center;gap:18px;flex-wrap:wrap}
+.docbox h3{font-size:1.2rem}
+.docbox p{color:var(--muted);font-size:.93rem}
+.note{background:#fbf1e9;border-left:4px solid var(--brand2);border-radius:10px;padding:14px 18px;font-size:.9rem;margin-top:28px}
+.empty{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:28px;margin:-34px 0 80px;color:var(--muted)}
+.ptab{overflow-x:auto;margin:12px 0}
+.ptab table{border-collapse:collapse;width:100%;font-size:.93rem}
+.ptab th{text-align:left;background:var(--soft);padding:9px 12px;font-weight:600}
+.ptab td{padding:8px 12px;border-bottom:1px solid var(--line)}
+.pbar{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin:18px 0 4px}
+.tog{display:inline-flex;border:1.5px solid var(--brand);border-radius:999px;overflow:hidden}
+.tog button{border:0;background:transparent;color:var(--brand);font:600 .88rem Inter,system-ui,sans-serif;padding:8px 18px;cursor:pointer}
+.tog button.on{background:var(--brand);color:#fff}
+.legend{font-size:.85rem;color:var(--muted);display:flex;align-items:center;gap:6px;flex-wrap:wrap}
+.sp{display:inline-flex;align-items:center;justify-content:center;min-width:34px;height:26px;padding:0 8px;border-radius:7px;font-weight:600;font-size:.88rem;margin-right:4px}
+.sp.g{background:var(--brand);color:#fff}
+.sp.o{background:var(--soft);color:var(--brand);border:1px solid #cdd6e3}
+.legend .li{white-space:nowrap;margin-right:10px}
+.ptab td.src{color:var(--muted);font-size:.85rem}
+.pnote{background:#fbf1e9;border-left:4px solid var(--brand2);border-radius:8px;padding:12px 14px;font-size:.9rem}
+.plist{padding-left:20px}.plist li{margin:8px 0}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}.flinks a{color:var(--muted)}.flinks a:hover{color:var(--brand)}
+.logo{display:flex;align-items:center;gap:10px}
+.lmark{width:38px;height:38px;flex:0 0 38px}
+.ltxt{display:flex;flex-direction:column;line-height:1.1}
+.lname{font-family:Fraunces,serif;font-weight:600;font-size:1.3rem;color:var(--ink)}
+.lname span{color:var(--brand)}
+.ltag{font-family:Inter,system-ui,sans-serif;font-size:.64rem;letter-spacing:.14em;text-transform:uppercase;color:var(--brand2);font-weight:600;margin-top:3px}
+@media(max-width:760px){.lmark{width:30px;height:30px;flex-basis:30px}.lname{font-size:1.02rem}.ltag{font-size:.5rem;letter-spacing:.08em}}
+@media(max-width:400px){.ltag{display:none}}
+nav a{white-space:nowrap}
+@media(max-width:1080px){nav a:not(.cta){display:none}}
+@media(max-width:760px){.logo{white-space:normal}.lname{font-size:.95rem;line-height:1.05;max-width:118px}nav a.cta{white-space:nowrap}}
+@media(max-width:560px){.ltag{display:none}}
+@media(max-width:420px){.lmark{width:26px;height:26px;flex-basis:26px}.logo{gap:7px}nav a.cta{margin-left:4px;padding:6px 9px}}
+</style>
+<style>
+.ubar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin:22px 0 8px}
+.ubar input{padding:10px 14px;border:1.5px solid var(--line);border-radius:999px;font:inherit;font-size:.93rem;min-width:240px;background:#fff}
+.ubar input:focus{outline:none;border-color:var(--brand)}
+@media(max-width:600px){#ftog button{padding:8px 11px;font-size:.8rem}.ubar input{min-width:0;width:100%}}
+.floor{margin-top:34px}
+.floor h3{font-size:1.25rem;margin-bottom:12px}
+.ugrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+.uc{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:18px 18px 16px;box-shadow:0 6px 20px rgba(29,42,51,.05);display:flex;flex-direction:column;gap:10px}
+.uh{display:flex;justify-content:space-between;align-items:baseline}
+.uh b{font-family:Fraunces,serif;font-size:1.5rem;color:var(--brand)}
+.ut{font-size:.75rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--brand2)}
+.uf{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.uf div{background:var(--soft);border-radius:10px;padding:7px 8px;text-align:center}
+.uf span{display:block;white-space:nowrap;font-size:.66rem;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.uf strong{font-size:.95rem}
+.ur{font-size:.88rem}
+.ur .k{display:block;font-size:.7rem;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);font-weight:600}
+.ur .none{color:var(--muted);font-style:italic}
+.ua{border-top:1px solid var(--line);padding-top:9px;font-size:.82rem;color:var(--muted);display:grid;grid-template-columns:auto 1fr;gap:2px 10px}
+.ua dt{font-weight:600;color:var(--ink)}
+.ua dd{text-align:right;white-space:nowrap}
+.empty{color:var(--muted);margin-top:20px}
+.sumrow{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:18px 0 6px}
+.sumrow div{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:12px 14px}
+.sumrow span{display:block;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.sumrow b{font-family:Fraunces,serif;font-size:1.2rem;color:var(--brand)}
+@media(max-width:700px){.sumrow{grid-template-columns:repeat(2,1fr)}}
+@media print{.ubar,.pbar{display:none}.uc{break-inside:avoid;box-shadow:none}}
+.clink{margin-left:8px;font-size:.78rem;font-weight:600;color:var(--brand2);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;font-family:inherit}
+.clink:hover{color:var(--brand)}
+.mback{position:fixed;inset:0;background:rgba(20,30,40,.55);display:none;align-items:center;justify-content:center;padding:16px;z-index:50}
+.mback.on{display:flex}
+.modal{background:#fff;border-radius:18px;max-width:520px;width:100%;max-height:92vh;overflow:auto;padding:24px 24px 20px;box-shadow:0 20px 60px rgba(0,0,0,.25)}
+.modal h3{font-size:1.35rem;margin-bottom:4px}
+.modal .sub{color:var(--muted);font-size:.88rem;margin-bottom:14px}
+.modal label{display:block;font-size:.82rem;font-weight:600;margin:10px 0 0}
+.modal input,.modal textarea{display:block;width:100%;margin-top:4px;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:.93rem}
+.modal input:focus,.modal textarea:focus{outline:none;border-color:var(--brand)}
+.modal .opt{font-weight:400;color:var(--muted)}
+.mact{display:flex;gap:10px;justify-content:flex-end;margin-top:16px}
+.mact button{padding:10px 18px;border-radius:999px;font:inherit;font-weight:600;font-size:.9rem;cursor:pointer;border:1.5px solid var(--brand)}
+.mact .send{background:var(--brand);color:#fff}
+.mact .cancel{background:#fff;color:var(--brand)}
+.mact button:disabled{opacity:.6;cursor:default}
+.mstat{font-size:.88rem;margin-top:10px;min-height:1.2em}
+.mstat.ok{color:#2e7d4f}.mstat.err{color:#b4442c}
+</style>
+<style>
+.rbar{display:flex;flex-wrap:wrap;gap:12px;align-items:center;justify-content:space-between;margin:22px 0 14px}
+.rbtn{display:inline-block;padding:11px 20px;border-radius:999px;font:600 .92rem Inter,system-ui,sans-serif;background:var(--brand2);color:#fff;border:0;cursor:pointer}
+.rbtn:hover{filter:brightness(.95)}
+.sortl{font-size:.82rem;color:var(--muted);margin-right:8px}
+table.reg{width:100%;border-collapse:separate;border-spacing:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.reg th{text-align:left;font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:12px 16px;border-bottom:1px solid var(--line);background:var(--soft)}
+.reg td{padding:13px 16px;border-bottom:1px solid var(--line);font-size:.93rem;vertical-align:middle}
+.reg tr:last-child td{border-bottom:0}
+.reg .nm{font-weight:600}
+.reg .un{font-family:Fraunces,serif;font-size:1.1rem;color:var(--brand)}
+.st{display:inline-block;font-size:.76rem;font-weight:600;padding:4px 10px;border-radius:999px;background:var(--soft);color:var(--brand)}
+.st.r{background:#fbeee5;color:#9a5530}
+.reg .clink{margin-left:0;font-size:.85rem}
+.modal select{display:block;width:100%;margin-top:4px;padding:10px 12px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:.93rem;background:#fff}
+.modal .two{display:grid;grid-template-columns:1fr 1fr;gap:0 12px}
+.modal .chk{display:flex;gap:10px;align-items:flex-start;font-weight:400;font-size:.86rem;margin-top:12px;line-height:1.45}
+.modal .chk input{width:auto;margin-top:3px;flex:none}
+.modal .notice{background:var(--soft);border-radius:10px;padding:10px 12px;font-size:.84rem;color:var(--ink);margin-top:14px;line-height:1.5}
+.soon{font-size:.72rem;font-weight:600;color:var(--brand2);text-transform:uppercase;letter-spacing:.06em}
+@media(max-width:640px){.reg thead{display:none}.reg,.reg tbody,.reg tr,.reg td{display:block;width:100%}.reg tr{border-bottom:1px solid var(--line);padding:10px 0}.reg tr:last-child{border-bottom:0}.reg td{border:0;padding:4px 16px}.modal .two{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header class="nav"><div class="wrap">
+<a class="logo" href="index.html"><svg class="lmark" viewBox="0 0 40 40" aria-hidden="true"><rect width="40" height="40" rx="9" fill="#1f3a5f"/><rect x="11" y="10" width="18" height="21" rx="1.5" fill="#fff"/><path d="M14 14h4M22 14h4M14 19h4M22 19h4M14 24h4M22 24h4" stroke="#1f3a5f" stroke-width="2.4"/><rect x="8" y="31" width="24" height="2.6" rx="1.3" fill="#c8794a"/></svg><span class="ltxt"><span class="lname">Salem <span>Place</span> Condominium</span><span class="ltag">Quality living in North Revere</span></span></a>
+<nav><a href="index.html">Home</a><a href="index.html#about">Building &amp; Location</a><a href="index.html#trail">Trail &amp; Neighborhood</a><a class="cta rent-cta" href="rentals.html">Units for Rent</a><a class="cta portal-cta" href="residents.html">Residents Portal</a><a href="about.html">About</a></nav>
+</div></header>
+
+<section class="banner"><div class="wrap">
+<div class="eyebrow" style="color:#f3d2b8"><a class="crumb" href="residents.html">Residents Portal</a></div>
+<h1>Owners &amp; Renters</h1>
+<p>A register of Salem Place owners and renters who have chosen to be listed. Email addresses and phone numbers are never shown; use the Contact link to send a message privately.</p>
+</div></section>
+<div class="wrap">
+<div class="faq" style="padding-top:34px;max-width:none">
+<div class="rbar">
+<button type="button" class="rbtn" id="regopen">Register</button>
+<div><span class="sortl">Sort by</span><div class="tog" id="stog"><button type="button" class="on" data-s="last">Last name</button><button type="button" data-s="unit">Unit</button></div></div>
+</div>
+<div id="reglist"><p class="empty">Loading the register...</p></div>
+<p class="pnote" style="margin-top:22px">Listings are added after review by the site administrator. To change or remove your listing, use the <a href="contact.html">contact form</a>.</p>
+</div>
+</div>
+<div class="mback" id="rback" role="dialog" aria-modal="true" aria-labelledby="rtitle">
+<form class="modal" id="rform" novalidate>
+<h3 id="rtitle">Join the register</h3>
+<p class="sub">Your listing appears after it is reviewed by the site administrator.</p>
+<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+<div class="two"><label>First name<input type="text" name="first_name" required autocomplete="given-name" maxlength="80"></label>
+<label>Last name<input type="text" name="last_name" required autocomplete="family-name" maxlength="80"></label></div>
+<div class="two"><label>Unit<select name="unit" required><option value="">Select</option><option>101</option><option>102</option><option>103</option><option>104</option><option>105</option><option>106</option><option>107</option><option>108</option><option>201</option><option>202</option><option>203</option><option>204</option><option>205</option><option>206</option><option>207</option><option>208</option><option>301</option><option>302</option><option>303</option><option>304</option><option>305</option><option>306</option><option>307</option><option>308</option><option>401</option><option>402</option><option>403</option><option>404</option><option>405</option><option>406</option><option>407</option><option>408</option><option>501</option><option>502</option><option>503</option><option>504</option><option>505</option><option>506</option><option>507</option><option>508</option></select></label>
+<label>I am a<select name="status" required><option value="">Select</option><option>Owner Occupant</option><option>Renter Occupant</option><option>Owner Non-Occupant</option></select></label></div>
+<label>Email<input type="email" name="email" required autocomplete="email" maxlength="200"></label>
+<label>Mobile phone <span class="opt">(optional)</span><input type="tel" name="phone" autocomplete="tel" maxlength="50"></label>
+<p class="notice">Once approved, your <b>name, unit and status</b> will be listed on this page for residents to see. Your email and phone number are kept private and are never shown on the site.</p>
+<label class="chk"><input type="checkbox" name="consent_contact" required><span>I agree that Salem Place may store my email address and phone number, and that residents may send me emails through this website. They will not see my address unless I reply.</span></label>
+<label class="chk"><input type="checkbox" name="sms_opt_in"><span>Also send me text messages at the number above. <span class="soon">Coming soon</span><br><span style="color:var(--muted)">Texting isn't available yet; we'll only send texts once it is, and you can opt out at any time.</span></span></label>
+<p class="mstat" id="rstat" role="status" aria-live="polite"></p>
+<div class="mact"><button type="button" class="cancel" id="rcancel">Close</button><button type="submit" class="send" id="rsend">Register</button></div>
+</form>
+</div>
+<div class="mback" id="mback" role="dialog" aria-modal="true" aria-labelledby="mtitle">
+<form class="modal" id="mform" novalidate>
+<h3 id="mtitle">Contact</h3>
+<p class="sub">Your message is delivered privately. Their email address is never shown, and yours is shared only so they can reply.</p>
+<input type="hidden" name="pid">
+<input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+<label>Your name<input type="text" name="name" required autocomplete="name" maxlength="200"></label>
+<label>Your email<input type="email" name="email" required autocomplete="email" maxlength="200"></label>
+<label>Phone <span class="opt">(optional)</span><input type="tel" name="phone" autocomplete="tel" maxlength="50"></label>
+<label>Message<textarea name="message" rows="5" required maxlength="5000"></textarea></label>
+<p class="mstat" id="mstat" role="status" aria-live="polite"></p>
+<div class="mact"><button type="button" class="cancel" id="mcancel">Close</button><button type="submit" class="send" id="msend">Send message</button></div>
+</form>
+</div>
+<footer><div class="wrap"><span>&copy; <span id="y">2026</span> Salem Place Condominium Association &middot; 292 Salem Street, Revere, MA 02151</span><span class="flinks"><a href="rentals.html">Units for Rent</a> &middot; <a href="residents.html">Residents Portal</a> &middot; <a href="about.html">About</a> &middot; <a href="contact.html">Contact</a></span></div></footer>
+<script>
+(function(){
+var CW="https://salemplace-contact.jhamel-209.workers.dev",AK="0193f823-4c72-4d3c-9b3c-c37e050d600a",P=[],SORT="last";
+function esc(s){return String(s==null?"":s).replace(/[&<>"]/g,function(c){return{"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]})}
+function cmp(a,b){return a<b?-1:a>b?1:0}
+function draw(){
+ var rows=P.slice().sort(SORT==="unit"?function(a,b){return cmp(a.unit,b.unit)||cmp(a.last.toLowerCase(),b.last.toLowerCase())}:function(a,b){return cmp(a.last.toLowerCase(),b.last.toLowerCase())||cmp(a.first.toLowerCase(),b.first.toLowerCase())||cmp(a.unit,b.unit)});
+ var el=document.getElementById("reglist");
+ if(!rows.length){el.innerHTML='<p class="empty">No one is listed yet. Use the Register button to add yourself.</p>';return}
+ el.innerHTML='<table class="reg"><thead><tr><th>Name</th><th>Unit</th><th>Status</th><th></th></tr></thead><tbody>'+rows.map(function(p){
+  return '<tr><td class="nm">'+esc(p.first)+' '+esc(p.last)+'</td><td><span class="un">'+esc(p.unit)+'</span></td><td><span class="st'+(p.status.indexOf("Renter")===0?" r":"")+'">'+esc(p.status)+'</span></td><td>'+(p.contact?'<button type="button" class="clink" data-id="'+p.id+'" data-n="'+esc(p.first+" "+p.last)+'" data-u="'+esc(p.unit)+'">Contact</button>':'')+'</td></tr>'}).join("")+'</tbody></table>';
+}
+function load(){fetch(CW+"/api/register",{cache:"no-store"}).then(function(r){return r.json()}).then(function(j){P=j.people||[];draw()}).catch(function(){document.getElementById("reglist").innerHTML='<p class="empty">The register could not be loaded. Please try again later.</p>'})}
+document.querySelectorAll("#stog button").forEach(function(b){b.addEventListener("click",function(){document.querySelectorAll("#stog button").forEach(function(x){x.classList.toggle("on",x===b)});SORT=b.dataset.s;draw()})});
+function modal(bk,closeBtn){function c(){bk.classList.remove("on")}closeBtn.addEventListener("click",c);bk.addEventListener("click",function(e){if(e.target===bk)c()});document.addEventListener("keydown",function(e){if(e.key==="Escape")c()});return c}
+function w3(fields){var fd=new FormData();fd.append("access_key",AK);Object.keys(fields).forEach(function(k){fd.append(k,fields[k])});
+ return fetch("https://api.web3forms.com/submit",{method:"POST",headers:{"Accept":"application/json"},body:fd}).then(function(r){return r.json()}).then(function(w){if(!w.success)throw new Error("")})}
+function post(path,d){return fetch(CW+path,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(d)}).then(function(r){return r.json().then(function(j){return{s:r.status,j:j}})})}
+/* register */
+var rb=document.getElementById("rback"),rf=document.getElementById("rform"),rs=document.getElementById("rstat"),rsb=document.getElementById("rsend");
+modal(rb,document.getElementById("rcancel"));
+document.getElementById("regopen").addEventListener("click",function(){rf.reset();rs.className="mstat";rs.textContent="";rsb.disabled=false;rsb.textContent="Register";rb.classList.add("on");setTimeout(function(){rf.first_name.focus()},50)});
+function rfail(m){rs.className="mstat err";rs.textContent=m;rsb.disabled=false;rsb.textContent="Register"}
+rf.addEventListener("submit",function(e){e.preventDefault();
+ if(!rf.first_name.value.trim()||!rf.last_name.value.trim()||!rf.unit.value||!rf.status.value||!rf.email.checkValidity()||!rf.email.value)return rfail("Please fill in your name, unit, status and a valid email.");
+ if(!rf.consent_contact.checked)return rfail("Please check the box agreeing to the storage of your contact details and to receiving emails through the site.");
+ rsb.disabled=true;rsb.textContent="Sending...";rs.className="mstat";rs.textContent="";
+ var d={first_name:rf.first_name.value.trim(),last_name:rf.last_name.value.trim(),unit:rf.unit.value,status:rf.status.value,email:rf.email.value.trim(),phone:rf.phone.value.trim(),consent_contact:true,sms_opt_in:rf.sms_opt_in.checked,botcheck:rf.botcheck.checked?"1":""};
+ post("/api/register",d).then(function(x){
+  if(!x.j.success)throw new Error(x.s===429?"Several registrations were already received from you today. Please try again tomorrow.":"");
+  if(!x.j.notify)return true;
+  return w3({subject:"New Owners & Renters registration: "+d.first_name+" "+d.last_name+", Unit "+d.unit,from_name:"Salem Place Register",name:d.first_name+" "+d.last_name,email:d.email,unit:d.unit,status:d.status,phone:d.phone,text_messages:d.sms_opt_in?"Opted in (not active yet)":"No",message:"A new registration is waiting for your approval in the admin register."}).catch(function(){});
+ }).then(function(){rs.className="mstat ok";rs.textContent="Thank you, "+d.first_name+". Your registration was received and will appear on this page once it is approved.";rsb.textContent="Received"})
+ .catch(function(err){rfail(err.message||"Sorry, your registration could not be sent. Please try again later.")});
+});
+/* contact */
+var mb=document.getElementById("mback"),mf=document.getElementById("mform"),ms=document.getElementById("mstat"),msb=document.getElementById("msend"),cur={};
+modal(mb,document.getElementById("mcancel"));
+document.getElementById("reglist").addEventListener("click",function(e){var b=e.target.closest(".clink");if(!b)return;cur={id:b.dataset.id,n:b.dataset.n,u:b.dataset.u};
+ mf.reset();mf.pid.value=cur.id;ms.className="mstat";ms.textContent="";msb.disabled=false;msb.textContent="Send message";
+ document.getElementById("mtitle").textContent="Contact "+cur.n+" (Unit "+cur.u+")";mb.classList.add("on");setTimeout(function(){mf.name.focus()},50)});
+function mfail(m){ms.className="mstat err";ms.textContent=m;msb.disabled=false;msb.textContent="Send message"}
+mf.addEventListener("submit",function(e){e.preventDefault();
+ if(!mf.checkValidity())return mfail("Please enter your name, a valid email and a message.");
+ msb.disabled=true;msb.textContent="Sending...";ms.className="mstat";ms.textContent="";
+ var d={id:cur.id,name:mf.name.value,email:mf.email.value,phone:mf.phone.value,message:mf.message.value,botcheck:mf.botcheck.checked?"1":""};
+ post("/api/register-contact",d).then(function(x){
+  if(!x.j.success)throw new Error(x.s===429?"You have sent several messages today. Please try again tomorrow.":x.s===404?"This person can no longer be contacted through the site.":"");
+  if(x.j.relay!=="web3forms")return true;
+  return w3({subject:"Message for "+x.j.to+", Unit "+x.j.unit+" (Salem Place register)",from_name:"Salem Place Register",replyto:d.email,name:d.name,email:d.email,phone:d.phone,message:d.message});
+ }).then(function(){ms.className="mstat ok";ms.textContent="Thank you. Your message was sent to "+cur.n+".";msb.textContent="Sent";mf.name.value=mf.email.value=mf.phone.value=mf.message.value=""})
+ .catch(function(err){mfail(err.message||"Sorry, the message could not be sent. Please try again later.")});
+});
+load();
+})();
+</script>
+<script>document.getElementById('y').textContent=new Date().getFullYear()</script>
+</body>
+</html>
